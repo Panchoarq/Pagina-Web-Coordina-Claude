@@ -1,0 +1,2151 @@
+[
+  {
+    "code": "EDU-01",
+    "typology": "educacional",
+    "name": "Sede Duoc Lastarria",
+    "location": "Chile",
+    "year": "2025-2026",
+    "client": "Cecilia Puga - Paula Velasco",
+    "area": "2,000 m²",
+    "description": "Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 5,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/EDU-01-01.png",
+        "caption": "Vista general modelo coordinado"
+      },
+      {
+        "url": "uploads/EDU-01-02.png",
+        "caption": "Modelo MEP federado"
+      },
+      {
+        "url": "uploads/EDU-01-03.png",
+        "caption": "Detalle instalaciones interior"
+      },
+      {
+        "url": "uploads/EDU-01-04.png",
+        "caption": "DETALLE ESPECIALIDADES"
+      },
+      {
+        "url": "uploads/EDU-01-05.png",
+        "caption": "Corte coordinado con especialidades"
+      }
+    ]
+  },
+  {
+    "code": "CUL-01",
+    "typology": "cultural",
+    "name": "Archivo Regional de Valparaíso",
+    "location": "Chile",
+    "year": "2025-2026",
+    "client": "Cecilia Puga - Paula Velasco",
+    "area": "5,300 m²",
+    "description": "Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 5,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/CUL-01-02.png",
+        "caption": "Vista general edificio"
+      },
+      {
+        "url": "uploads/CUL-01-01.png",
+        "caption": "Modelo MEP coordinado"
+      },
+      {
+        "url": "uploads/CUL-01-03.png",
+        "caption": "Cubierta y equipos técnicos"
+      },
+      {
+        "url": "uploads/CUL-01-04.png",
+        "caption": "Corte transversal coordinado"
+      },
+      {
+        "url": "uploads/CUL-01-05.png",
+        "caption": "Planta de climatización"
+      }
+    ]
+  },
+  {
+    "code": "SAL-01",
+    "typology": "salud",
+    "name": "Hospital Cordillera - Coordinación Pasillos, Auditorio y Jardín Infantil",
+    "location": "Chile",
+    "year": "2024-2026",
+    "client": "Concesionaria Sacyr",
+    "area": "98,305 m²",
+    "description": "Coordinación de pasillos de todo el hospital, auditorio y jardín infantil. Generación de entrega de planos de Clima desde modelo.",
+    "services": [
+      "Coordinacion BIM"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 5,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/SAL-01-01.png",
+        "caption": "Vista general modelo federado"
+      },
+      {
+        "url": "uploads/SAL-01-02.png",
+        "caption": "Vista aérea cubierta y torres"
+      },
+      {
+        "url": "uploads/SAL-01-03.png",
+        "caption": "Detalle coordinación MEP"
+      },
+      {
+        "url": "uploads/SAL-01-04.png",
+        "caption": "Corte transversal instalaciones"
+      },
+      {
+        "url": "uploads/SAL-01-05.png",
+        "caption": "Interior con instalaciones expuestas"
+      }
+    ]
+  },
+  {
+    "code": "CUL-02",
+    "typology": "cultural",
+    "name": "Cenro Antártico Internacional",
+    "location": "Chile",
+    "year": "2025",
+    "client": "Alberto Moletto Arquitectos",
+    "area": "20,000 m²",
+    "description": "Modelación y coordinación de especialidades ajuste nueva versión de proeycto",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 6,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/CUL-02-06.png",
+        "caption": "Vista isométrica coordinación MEP"
+      },
+      {
+        "url": "uploads/CUL-02-01.png",
+        "caption": "Modelo federado en planta"
+      },
+      {
+        "url": "uploads/CUL-02-02.png",
+        "caption": "Vista general especialidades"
+      },
+      {
+        "url": "uploads/CUL-02-04.png",
+        "caption": "Coordinación en sala equipos"
+      },
+      {
+        "url": "uploads/CUL-02-05.png",
+        "caption": "Planta general instalaciones"
+      },
+      {
+        "url": "uploads/CUL-02-07.png",
+        "caption": "Vista general modelo BIM"
+      }
+    ]
+  },
+  {
+    "code": "OFI-01",
+    "typology": "oficinas",
+    "name": "Edificio Corporativo EFE",
+    "location": "Chile",
+    "year": "2024",
+    "client": "TORUM",
+    "area": "12,600 m²",
+    "description": "Escaneo láser, Modelado Asbuilt, Modelación y coordinación de especialidades,",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Modelado As-Built",
+      "Escaneo laser 3D"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 3,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/Corte Long.jpg",
+        "caption": "Corte longitudinal coordinado"
+      },
+      {
+        "url": "uploads/Corte Long-71f89e25.jpg",
+        "caption": "Corte detallado especialidades"
+      },
+      {
+        "url": "uploads/Corte Long-e08cee1a.jpg",
+        "caption": "Sección transversal"
+      }
+    ]
+  },
+  {
+    "code": "INF-01",
+    "typology": "infraestructura",
+    "name": "Teleférico Bicentenario Metropolitano",
+    "location": "Chile",
+    "year": "2022-2024",
+    "client": "Icafal",
+    "area": "15,263 m²",
+    "description": "BIM Manager y Coordinación BIM. Creación de Plataforma ACC, definición de estructura de administración, grupos de trabajo colaborativo y coordinación de especialidades. Modelación de especialidad sanitaria, micropilotes.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "BIM Management"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-02",
+    "typology": "salud",
+    "name": "Hospital Buin Paine",
+    "location": "Chile",
+    "year": "2021-2024",
+    "client": "Bbats Consulting / Sacyr",
+    "area": "56,000 m²",
+    "description": "Coordinador BIM. Modelado especialdiades",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "CUL-03",
+    "typology": "cultural",
+    "name": "Centro Cultural GAM 2",
+    "location": "Chile",
+    "year": "2023",
+    "client": "Cristian Fernández Arquitectos",
+    "area": "15,263 m²",
+    "description": "BIM Manager. Levantamiento de edificio existente mediante escáner láser, generación de modelos As Built, coordinación de proyectos. Configuración y administración de plataforma BIM 360.",
+    "services": [
+      "Coordinacion BIM",
+      "BIM Management",
+      "Modelado As-Built",
+      "Escaneo laser 3D"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 2,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/CBC_GAM_BIM_MD_001.png",
+        "caption": "Modelo As-Built GAM"
+      },
+      {
+        "url": "uploads/CBC_GAM_BIM_MD_001-e4c0baf4.png",
+        "caption": "Nube de puntos procesada"
+      }
+    ]
+  },
+  {
+    "code": "SAL-03",
+    "typology": "salud",
+    "name": "Hospital La Florida - Ampliación Sistema Clima",
+    "location": "Chile",
+    "year": "2022",
+    "client": "JG Ingenieros",
+    "area": "67,504 m²",
+    "description": "Coordinación BIM General del equipo de diseño.",
+    "services": [
+      "Coordinacion BIM",
+      "BIM Management"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "RET-01",
+    "typology": "retail",
+    "name": "Locales Starbucks Aeropuerto Nuevo Pudahuel",
+    "location": "Chile",
+    "year": "2022",
+    "client": "Constructora CNC",
+    "area": "976 m²",
+    "description": "Modelación Asbuilt de arquitectura, estructura y especialidades. Planimetría desde modelo según Plan NPU.",
+    "services": [
+      "Modelado MEP",
+      "Modelado As-Built"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-04",
+    "typology": "salud",
+    "name": "Hospital Maipú - Ampliación Sistema Clima",
+    "location": "Chile",
+    "year": "2022",
+    "client": "JG Ingenieros",
+    "area": "70,301 m²",
+    "description": "Coordinación BIM General del equipo de diseño.",
+    "services": [
+      "Coordinacion BIM",
+      "BIM Management"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "CUL-04",
+    "typology": "cultural",
+    "name": "Museo Regional de Ñuble",
+    "location": "Chile",
+    "year": "2021/2022",
+    "client": "Tirado Arquitectos",
+    "area": "5,827 m²",
+    "description": "Modelación y coordinación BIM de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "CUL-05",
+    "typology": "cultural",
+    "name": "Centro Artesanal Coyhaique",
+    "location": "Chile",
+    "year": "2021/2022",
+    "client": "Tirado Arquitectos",
+    "area": "2,200 m²",
+    "description": "Modelación y coordinación BIM de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "CUL-06",
+    "typology": "cultural",
+    "name": "Archivo Regional Tarapacá",
+    "location": "Chile",
+    "year": "2021",
+    "client": "Moletto Arquitectos",
+    "area": "4,500 m²",
+    "description": "Coordinación BIM Obra. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Asesoria en Obra"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-02",
+    "typology": "oficinas",
+    "name": "Edificio Diagonal Puerto Montt",
+    "location": "Chile",
+    "year": "2021",
+    "client": "Real Assets",
+    "area": "16,131 m²",
+    "description": "Coordinador BIM. Modelación y coordinación BIM de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-01",
+    "typology": "vivienda",
+    "name": "Edificio Puerto Chico - Puerto Varas",
+    "location": "Chile",
+    "year": "2021",
+    "client": "Real Assets",
+    "area": "16,386 m²",
+    "description": "Modelación y coordinación BIM de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "INF-02",
+    "typology": "infraestructura",
+    "name": "Comisaría Providencia Sur",
+    "location": "Chile",
+    "year": "2020-2021",
+    "client": "Iglesis Arquitectos",
+    "area": "4,000 m²",
+    "description": "Coordinación BIM , Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "INF-03",
+    "typology": "infraestructura",
+    "name": "Banco Central - Centro Logístico (Contraparte Técnica)",
+    "location": "Chile",
+    "year": "2018-2022",
+    "client": "Banco Central de Chile",
+    "area": "20,000 m²",
+    "description": "BIM Manager. Definición de plan BIM, estándares y metodologías. Contraparte técnica de oficinas de ingeniería para IB e ID.",
+    "services": [
+      "BIM Management",
+      "Asesoria BIM"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "IND-01",
+    "typology": "industrial",
+    "name": "Centro Importaciones Carga Aeropuerto Santiago - Aerosan, Depocargo y Fastair (Etapa A)",
+    "location": "Chile",
+    "year": "2018/2020",
+    "client": "Optimiza Gerenciamiento",
+    "area": "27,562 m²",
+    "description": "Coordinación BIM Obra. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Asesoria en Obra"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-05",
+    "typology": "salud",
+    "name": "Hospital Alto Hospicio",
+    "location": "Chile",
+    "year": "2019",
+    "client": "Bbats Consulting & Projects S.L.P.",
+    "area": "37,000 m²",
+    "description": "Coordinación BIM Obra. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Asesoria en Obra"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-02",
+    "typology": "vivienda",
+    "name": "Edificio de Viviendas Rosas",
+    "location": "Chile",
+    "year": "2019",
+    "client": "Inmobiliaria Torina",
+    "area": "9,101 m²",
+    "description": "Coordinación BIM, Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-03",
+    "typology": "vivienda",
+    "name": "Edificio de Viviendas Studio +",
+    "location": "Chile",
+    "year": "2019",
+    "client": "Inmo B Spa",
+    "area": "6,900 m²",
+    "description": "Coordinación BIM, Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-04",
+    "typology": "vivienda",
+    "name": "Edificio Vivienda Plaza Candelaria",
+    "location": "Chile",
+    "year": "2018/2019",
+    "client": "Real Assets",
+    "area": "3,105 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-05",
+    "typology": "vivienda",
+    "name": "Edificio Mar Jónico",
+    "location": "Chile",
+    "year": "2018/2019",
+    "client": "Montalva Quindos",
+    "area": "5,739 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "CUL-07",
+    "typology": "cultural",
+    "name": "Centro Antártico Internacional",
+    "location": "Chile",
+    "year": "2018/2019",
+    "client": "Alberto Moletto Arquitectos",
+    "area": "21,000 m²",
+    "description": "Coordinación BIM Obra. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Asesoria en Obra"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "RET-02",
+    "typology": "retail",
+    "name": "Mall Paseo Alerce Etapa I",
+    "location": "Chile",
+    "year": "2018/2019",
+    "client": "Grupo Pasmar",
+    "area": "34,628 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.Asesori aen Obra",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Asesoria BIM",
+      "Asesoria en Obra"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "RET-03",
+    "typology": "retail",
+    "name": "Homecenter Vallenar",
+    "location": "Chile",
+    "year": "2018",
+    "client": "Rentas Falabella S.A.",
+    "area": "10,000 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "RET-04",
+    "typology": "retail",
+    "name": "Tottus Coquimbo",
+    "location": "Chile",
+    "year": "2018",
+    "client": "Rentas Falabella S.A.",
+    "area": "11,444 m²",
+    "description": "Coordinación BIM Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "RET-05",
+    "typology": "retail",
+    "name": "Ampliación Homecenter Valdivia",
+    "location": "Chile",
+    "year": "2018",
+    "client": "Rentas Falabella S.A.",
+    "area": "3,000 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 12,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/RET-05-1.png",
+        "caption": "Vista general Sodimac Homecenter"
+      },
+      {
+        "url": "uploads/RET-05-2.jpg",
+        "caption": "Nube de puntos escaneo láser"
+      },
+      {
+        "url": "uploads/RET-05-3.jpg",
+        "caption": "Modelo estructural federado"
+      },
+      {
+        "url": "uploads/RET-05-4.jpg",
+        "caption": "Fachada con nube de puntos"
+      },
+      {
+        "url": "uploads/RET-05-5.jpg",
+        "caption": "Corte longitudinal coordinado"
+      },
+      {
+        "url": "uploads/RET-05-6.jpg",
+        "caption": "Detalle estructura de techumbre"
+      },
+      {
+        "url": "uploads/RET-05-7.jpg",
+        "caption": "Fachada principal escaneada"
+      },
+      {
+        "url": "uploads/RET-05-8.png",
+        "caption": "Interior de bodega escaneado"
+      },
+      {
+        "url": "uploads/RET-05-9.png",
+        "caption": "Vista interior pasillo principal"
+      },
+      {
+        "url": "uploads/RET-05-11.jpg",
+        "caption": "Corredor de sala de ventas"
+      },
+      {
+        "url": "uploads/RET-05-12.jpg",
+        "caption": "Cubierta y estructura interior"
+      },
+      {
+        "url": "uploads/RET-05-13.jpg",
+        "caption": "Vista general del vehículo de escaneo"
+      }
+    ]
+  },
+  {
+    "code": "SAL-06",
+    "typology": "salud",
+    "name": "Hospital Quillota Petorca",
+    "location": "Chile",
+    "year": "2017/2018",
+    "client": "Bbats + Tirado Arquitectos",
+    "area": "70,534 m²",
+    "description": "Asesoría BIM, coordinación BIM y revisión de criterios.",
+    "services": [
+      "Coordinacion BIM",
+      "Asesoria BIM"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "INF-04",
+    "typology": "infraestructura",
+    "name": "Banco Central - Centro Logístico (Worley Parsons)",
+    "location": "Chile",
+    "year": "2017/2018",
+    "client": "Worley Parsons",
+    "area": "20,000 m²",
+    "description": "BIM Manager, Definición de plan de implementación BIM, estándares y metodologías de trabajo para oficinas consultoras y auditorías.",
+    "services": [
+      "BIM Management",
+      "Asesoria BIM"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-06",
+    "typology": "vivienda",
+    "name": "Edificio Aires de Recoleta",
+    "location": "Chile",
+    "year": "2017/2018",
+    "client": "BAU Ingenieros Consultores",
+    "area": "13,886 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-07",
+    "typology": "salud",
+    "name": "Consultoría BIM Hospital El Salvador / Instituto de Geriatría CSSO",
+    "location": "Chile",
+    "year": "2015/2018",
+    "client": "CSSO",
+    "area": "160,000 m²",
+    "description": "Revisión de proyectos, auditoría y revisión de criterios BIM.",
+    "services": [
+      "Asesoria BIM"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-03",
+    "typology": "oficinas",
+    "name": "Edificio Centenario - Mutual de Carabineros",
+    "location": "Chile",
+    "year": "2017",
+    "client": "Kronos Ltda.",
+    "area": "20,000 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-04",
+    "typology": "oficinas",
+    "name": "Edificio Hannover",
+    "location": "Chile",
+    "year": "2017",
+    "client": "MJ Gestión",
+    "area": "19,030 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-05",
+    "typology": "oficinas",
+    "name": "Edificio de Oficinas y Centro de Eventos Hyatt",
+    "location": "Chile",
+    "year": "2016",
+    "client": "BAU Ingenieros Consultores",
+    "area": "29,000 m²",
+    "description": "Coordinación BIM. Modelación y especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "INF-05",
+    "typology": "infraestructura",
+    "name": "Aeropuerto Nuevo Pudahuel",
+    "location": "Chile",
+    "year": "2016",
+    "client": "Concesionaria Nuevo Pudahuel",
+    "area": "110,000 m²",
+    "description": "Trabajo con plataforma C4R para integrar modelo a sistema BIM de concesionaria y unificación de modelos. Puesta en marcha sistema, modelacion as built edificios existentes.",
+    "services": [
+      "Modelado MEP",
+      "BIM Management",
+      "Modelado As-Built"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "INF-06",
+    "typology": "infraestructura",
+    "name": "Ampliación Aeropuerto Carriel Sur - Terminal + Obras Exteriores",
+    "location": "Chile",
+    "year": "2016",
+    "client": "Icafal",
+    "area": "30,000 m²",
+    "description": "Modelación as built, Modelación BIM especialdaides , escáner láser y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Modelado As-Built",
+      "Escaneo laser 3D"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 2,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/INF-06-02.png",
+        "caption": "Vista general terminal"
+      },
+      {
+        "url": "uploads/INF-06-03.png",
+        "caption": "Modelo federado estructura y MEP"
+      }
+    ]
+  },
+  {
+    "code": "HOT-01",
+    "typology": "hoteleria",
+    "name": "Edificio OMR y Centro de Eventos Hyatt OMR",
+    "location": "Chile",
+    "year": "2016",
+    "client": "BAU Ingenieros Consultores",
+    "area": "24,420 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "INF-07",
+    "typology": "infraestructura",
+    "name": "Modelación Nuevo Proyecto Clima Banco Central",
+    "location": "Chile",
+    "year": "2015/2016",
+    "client": "Banco Central",
+    "area": "6,994 m²",
+    "description": "Coordinación BIM. Modelación y especialidades sistema de climatización.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-06",
+    "typology": "oficinas",
+    "name": "Edificio de Oficinas Synergy",
+    "location": "Chile",
+    "year": "2015/2016",
+    "client": "BAU Ingenieros Consultores",
+    "area": "15,654 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-08",
+    "typology": "salud",
+    "name": "Clínica Indisa",
+    "location": "Chile",
+    "year": "2015",
+    "client": "Clínica Indisa",
+    "area": "7,300 m²",
+    "description": "Coordinación BIM en obra. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Asesoria en Obra"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 7,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/SAL-09-1.jpg",
+        "caption": "Modelo coordinado isométrico"
+      },
+      {
+        "url": "uploads/SAL-09-3.jpg",
+        "caption": "Vista transparente MEP"
+      },
+      {
+        "url": "uploads/SAL-09-8.JPG",
+        "caption": "Detalle instalaciones interior"
+      },
+      {
+        "url": "uploads/SAL-09-9.JPG",
+        "caption": "Vista cubierta y equipos"
+      },
+      {
+        "url": "uploads/SAL-09-10.JPG",
+        "caption": "Modelo completo federado"
+      },
+      {
+        "url": "uploads/SAL-09-11.jpg",
+        "caption": "Corte con instalaciones"
+      },
+      {
+        "url": "uploads/SAL-09-15.jpg",
+        "caption": "Fachada con especialidades"
+      }
+    ]
+  },
+  {
+    "code": "VIV-07",
+    "typology": "vivienda",
+    "name": "Edificio Residencial Ochoa",
+    "location": "Chile",
+    "year": "2015",
+    "client": "Inmobiliaria Santa Isabel",
+    "area": "10,400 m²",
+    "description": "Coordinación BIM. Modelación y especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "EDU-02",
+    "typology": "educacional",
+    "name": "Facultad de Medicina UNAB Concepción (segunda etapa)",
+    "location": "Chile",
+    "year": "2015",
+    "client": "Laureate Spa",
+    "area": "9,000 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 8,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/EDU-02-2.jpg",
+        "caption": "Vista general edificios coordinados"
+      },
+      {
+        "url": "uploads/EDU-02-5.jpg",
+        "caption": "Modelo MEP fachada"
+      },
+      {
+        "url": "uploads/EDU-02-8.jpg",
+        "caption": "Corte transversal instalaciones"
+      },
+      {
+        "url": "uploads/EDU-02-9.jpg",
+        "caption": "Vista fachada interior con MEP"
+      },
+      {
+        "url": "uploads/EDU-02-10.jpg",
+        "caption": "Vista general campus"
+      },
+      {
+        "url": "uploads/EDU-02-12.jpg",
+        "caption": "Detalle instalaciones cubierta"
+      },
+      {
+        "url": "uploads/EDU-02-13.jpg",
+        "caption": "Vista interior especialidades"
+      },
+      {
+        "url": "uploads/EDU-02-14.jpg",
+        "caption": "Fachada con instalaciones expuestas"
+      }
+    ]
+  },
+  {
+    "code": "VIV-08",
+    "typology": "vivienda",
+    "name": "Edificio Miguel Claro",
+    "location": "Chile",
+    "year": "2015",
+    "client": "Felipe Soffia Arquitectos",
+    "area": "4,923 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "HOT-02",
+    "typology": "hoteleria",
+    "name": "Hotel Court Yard by Marriott",
+    "location": "Chile",
+    "year": "2014",
+    "client": "Integra Proyectos",
+    "area": "25,900 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 7,
+    "has_images": true,
+    "images": [
+      {
+        "url": "https://drive.google.com/thumbnail?id=116sTHa4_LadIl_4x1HPbNmmhF0q-qJtS&sz=w1920",
+        "caption": "Vista general hotel"
+      },
+      {
+        "url": "https://drive.google.com/thumbnail?id=10DUEQbxNvlnW4gjEOpobrB-is-fvwzWO&sz=w1920",
+        "caption": "Modelo MEP coordinado"
+      },
+      {
+        "url": "https://drive.google.com/thumbnail?id=1i361ODH00E1KsyDx1YHNx3fwQ7xS1kW4&sz=w1920",
+        "caption": "Coordinación instalaciones"
+      },
+      {
+        "url": "https://drive.google.com/thumbnail?id=1O8789q3brrMAVo5vzJC6RHNLHfjNmLXi&sz=w1920",
+        "caption": "Detalle MEP nivel"
+      },
+      {
+        "url": "https://drive.google.com/thumbnail?id=1af79n_xYQ6JET03dF_tRQKoiujIbR-Em&sz=w1920",
+        "caption": "Perspectiva estructural"
+      },
+      {
+        "url": "https://drive.google.com/thumbnail?id=1uwIcVZOzhVjVphCzHrMi5gwLVPgR0l7P&sz=w1920",
+        "caption": "Modelo federado completo"
+      },
+      {
+        "url": "https://drive.google.com/thumbnail?id=1t7L0fX5ui1eUdl7S_Qzf9AITGm0kowbw&sz=w1920",
+        "caption": "Vista isométrica"
+      }
+    ]
+  },
+  {
+    "code": "CUL-08",
+    "typology": "cultural",
+    "name": "Teatro Municipal Pudahuel",
+    "location": "Chile",
+    "year": "2014",
+    "client": "Bis Arquitectos",
+    "area": "2,000 m²",
+    "description": "Asesoría de coordinación espacial BIM para proyecto de arquitectura.",
+    "services": [
+      "Coordinacion BIM",
+      "Asesoria BIM"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-09",
+    "typology": "salud",
+    "name": "Cesfam Copiapó",
+    "location": "Chile",
+    "year": "2014",
+    "client": "Empresa RR y Cía Ltda",
+    "area": "2,267 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-10",
+    "typology": "salud",
+    "name": "Asesoría BIM Hospital de San Bernardo",
+    "location": "Chile",
+    "year": "2014",
+    "client": "De Iruarrizaga Arquitectos",
+    "area": "6,000 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 5,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/SAL-10-6.jpg",
+        "caption": "Modelo federado especialidades"
+      },
+      {
+        "url": "uploads/SAL-10-4.jpg",
+        "caption": "Vista general modelo coordinado"
+      },
+      {
+        "url": "uploads/SAL-10-5.jpg",
+        "caption": "Modelo MEP fondo negro"
+      },
+      {
+        "url": "uploads/SAL-10-7.jpg",
+        "caption": "Vista aérea cuerpos del hospital"
+      },
+      {
+        "url": "uploads/SAL-10-9.jpg",
+        "caption": "Detalle instalaciones interior"
+      }
+    ]
+  },
+  {
+    "code": "VIV-09",
+    "typology": "vivienda",
+    "name": "Edificio Canto del Agua",
+    "location": "Chile",
+    "year": "2014",
+    "client": "BAU Ingenieros Consultores",
+    "area": "12,890 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-10",
+    "typology": "vivienda",
+    "name": "Edificio Terrazas de Lo Curro",
+    "location": "Chile",
+    "year": "2014",
+    "client": "BAU Ingenieros Consultores",
+    "area": "17,587 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "RET-06",
+    "typology": "retail",
+    "name": "Mall Open Plaza Ovalle",
+    "location": "Chile",
+    "year": "2014",
+    "client": "Integra Proyectos",
+    "area": "33,000 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-11",
+    "typology": "vivienda",
+    "name": "Edificio Génesis",
+    "location": "Chile",
+    "year": "2014",
+    "client": "BAU Ingenieros Consultores",
+    "area": "5,800 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "EDU-03",
+    "typology": "educacional",
+    "name": "Instituto Profesional Virginio Gómez",
+    "location": "Chile",
+    "year": "2014",
+    "client": "Marsino Arquietctos",
+    "area": "6,600 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-12",
+    "typology": "vivienda",
+    "name": "Edificio Residencial Velas de Montemar",
+    "location": "Chile",
+    "year": "2014",
+    "client": "BAU Ingenieros Consultores",
+    "area": "10,000 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-11",
+    "typology": "salud",
+    "name": "Centro Médico Manuel Montt",
+    "location": "Chile",
+    "year": "2013",
+    "client": "Iglesis Prat Arquitectos",
+    "area": "23,000 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 3,
+    "has_images": true,
+    "images": [
+      {
+        "url": "https://drive.google.com/thumbnail?id=1rySCJw_XVv4wSsWv5rzhAiyKvW9lVZY-&sz=w1920",
+        "caption": "Vista modelo coordinado"
+      },
+      {
+        "url": "https://drive.google.com/thumbnail?id=1fFwPtHWnWs0CwMJv1-45B-5hHMJ0McpY&sz=w1920",
+        "caption": "Detalle MEP interior"
+      },
+      {
+        "url": "https://drive.google.com/thumbnail?id=1wPCUBQYIHC15Qwm0zXc9FsMbp_L6-KJ7&sz=w1920",
+        "caption": "Perspectiva instalaciones"
+      }
+    ]
+  },
+  {
+    "code": "VIV-13",
+    "typology": "vivienda",
+    "name": "Edificio Santa Inés",
+    "location": "Chile",
+    "year": "2013",
+    "client": "",
+    "area": "31,791 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "HOT-03",
+    "typology": "hoteleria",
+    "name": "Remodelación Hotel City",
+    "location": "Chile",
+    "year": "2013",
+    "client": "BAU Ingenieros Consultores",
+    "area": "8,300 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.Modelos AS Built, escaneo láser",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Modelado As-Built",
+      "Escaneo laser 3D"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 6,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/HOT-03-1.jpg",
+        "caption": "Modelo MEP federado"
+      },
+      {
+        "url": "uploads/HOT-03-5.jpg",
+        "caption": "Vista general fachada"
+      },
+      {
+        "url": "uploads/HOT-03-6.jpg",
+        "caption": "Detalle instalaciones interior"
+      },
+      {
+        "url": "uploads/HOT-03-7.jpg",
+        "caption": "Vista en planta especialidades"
+      },
+      {
+        "url": "uploads/HOT-03-8.jpg",
+        "caption": "Detalle sistema climatización"
+      },
+      {
+        "url": "uploads/HOT-03-10.jpg",
+        "caption": "Vista general edificios"
+      }
+    ]
+  },
+  {
+    "code": "VIV-14",
+    "typology": "vivienda",
+    "name": "Edificio Matta",
+    "location": "Chile",
+    "year": "2013",
+    "client": "PY Proyectos",
+    "area": "7,026 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 7,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/VIV-14-11.jpg",
+        "caption": "Vista general edificio"
+      },
+      {
+        "url": "uploads/VIV-14-4.jpg",
+        "caption": "Modelo axonométrico coordinado"
+      },
+      {
+        "url": "uploads/VIV-14-6.jpg",
+        "caption": "Modelo MEP especialidades"
+      },
+      {
+        "url": "uploads/VIV-14-7.jpg",
+        "caption": "Planta técnica azotea"
+      },
+      {
+        "url": "uploads/VIV-14-8.jpg",
+        "caption": "Fachada coordinada"
+      },
+      {
+        "url": "uploads/VIV-14-9.jpg",
+        "caption": "Detalle instalaciones azotea"
+      },
+      {
+        "url": "uploads/VIV-14-10.jpg",
+        "caption": "Vista general instalaciones"
+      }
+    ]
+  },
+  {
+    "code": "SAL-12",
+    "typology": "salud",
+    "name": "Hospital Concesionado de La Florida - Asesoría en Obra",
+    "location": "Chile",
+    "year": "2011/2013",
+    "client": "Concesionaria San José",
+    "area": "70,301 m²",
+    "description": "Coordinación BIM en obra, Modelación y coordinación de especialidades en terreno.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Asesoria en Obra"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-13",
+    "typology": "salud",
+    "name": "Hospital Concesionado de Maipú - Asesoría en Obra",
+    "location": "Chile",
+    "year": "2011/2013",
+    "client": "Concesionaria San José",
+    "area": "67,504 m²",
+    "description": "Coordinación BIM en obra, Modelación y coordinación de especialidades en terreno.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Asesoria en Obra"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-07",
+    "typology": "oficinas",
+    "name": "Edificio de Oficinas NG",
+    "location": "Chile",
+    "year": "2012",
+    "client": "BAU Ingenieros Consultores",
+    "area": "15,954 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "EDU-04",
+    "typology": "educacional",
+    "name": "Facultad de Medicina UNAB - Campus Concepción",
+    "location": "Chile",
+    "year": "2012",
+    "client": "Murtinho y Raby Arquitectos",
+    "area": "40,412 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 7,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/EDU-04-2.jpg",
+        "caption": "Vista general modelo federado"
+      },
+      {
+        "url": "uploads/EDU-04-4.jpg",
+        "caption": "Corte longitudinal MEP"
+      },
+      {
+        "url": "uploads/EDU-04-6.jpg",
+        "caption": "Detalle especialidades cubierta"
+      },
+      {
+        "url": "uploads/EDU-04-7.jpg",
+        "caption": "Fachada principal coordinada"
+      },
+      {
+        "url": "uploads/EDU-04-8.jpg",
+        "caption": "Interior pasillo con instalaciones"
+      },
+      {
+        "url": "uploads/EDU-04-9.jpg",
+        "caption": "Vista interior especialidades"
+      },
+      {
+        "url": "uploads/EDU-04-10.jpg",
+        "caption": "Fachada y patio central"
+      }
+    ]
+  },
+  {
+    "code": "SAL-14",
+    "typology": "salud",
+    "name": "Hospital Concesionado de Maipú",
+    "location": "Chile",
+    "year": "2010/2011",
+    "client": "Bbats Consulting & Projects SLP + Murtinho+Raby Arquitectos",
+    "area": "70,301 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-15",
+    "typology": "salud",
+    "name": "Hospital Concesionado de La Florida",
+    "location": "Chile",
+    "year": "2010/2011",
+    "client": "Bbats Consulting & Projects SLP + Murtinho+Raby Arquitectos",
+    "area": "67,504 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "DEP-01",
+    "typology": "deportivo",
+    "name": "Gimnasio Municipal Juan Fernández",
+    "location": "Chile",
+    "year": "2025",
+    "client": "Carreño Sartori Arquitectos",
+    "area": "1,472 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 7,
+    "has_images": true,
+    "images": [
+      {
+        "url": "uploads/DEP-01-9.png",
+        "caption": "Detalle baños y sanitarias"
+      },
+      {
+        "url": "uploads/DEP-01-2.png",
+        "caption": "Estructura de cubierta y graderías"
+      },
+      {
+        "url": "uploads/DEP-01-5.png",
+        "caption": "Detalle MEP en cubierta"
+      },
+      {
+        "url": "uploads/DEP-01-6.png",
+        "caption": "Detalle ductos en estructura"
+      },
+      {
+        "url": "uploads/DEP-01-7.png",
+        "caption": "Vista general instalaciones cubierta"
+      },
+      {
+        "url": "uploads/DEP-01-8.png",
+        "caption": "Corte general con especialidades"
+      },
+      {
+        "url": "uploads/DEP-01-11.png",
+        "caption": "Vista general graderías y estructura"
+      }
+    ]
+  },
+  {
+    "code": "RET-07",
+    "typology": "retail",
+    "name": "Salones VIP Aeropuerto Internacional de Santiago",
+    "location": "Chile",
+    "year": "2022",
+    "client": "Grupo Arquitectos",
+    "area": "3,400 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.Escaneo Láser, Modelo Asbuilt",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP",
+      "Modelado As-Built",
+      "Escaneo laser 3D"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "CUL-09",
+    "typology": "cultural",
+    "name": "Mercado de Providencia",
+    "location": "Chile",
+    "year": "2021/2022",
+    "client": "Tirado Arquitectos",
+    "area": "",
+    "description": "Escaneo Láser",
+    "services": [
+      "Escaneo laser 3D"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-08",
+    "typology": "oficinas",
+    "name": "Edificio Alonso Square",
+    "location": "Chile",
+    "year": "2018/2019",
+    "client": "Real Assets",
+    "area": "11,413 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "SAL-16",
+    "typology": "salud",
+    "name": "Cesfam Paullaco-Lautaro",
+    "location": "Chile",
+    "year": "2017",
+    "client": "Jaldin & Cumian Arquitectos",
+    "area": "2,883 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "RET-08",
+    "typology": "retail",
+    "name": "Locales VIP y Comerciales Aeropuerto NPU",
+    "location": "Chile",
+    "year": "2017",
+    "client": "Varios",
+    "area": "Varios",
+    "description": "Modelado As Built",
+    "services": [
+      "Modelado MEP",
+      "Modelado As-Built"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "sm",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "INF-08",
+    "typology": "infraestructura",
+    "name": "Aeropuerto Nuevo Pudahuel",
+    "location": "Chile",
+    "year": "2015/2016",
+    "client": "Setec Francia",
+    "area": "110,000 m²",
+    "description": "Escaneo Láser, modelo AS Built, Modelado especialidades, asesoria BIM",
+    "services": [
+      "Modelado MEP",
+      "Asesoria BIM",
+      "Modelado As-Built",
+      "Escaneo laser 3D"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "lg",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-09",
+    "typology": "oficinas",
+    "name": "Edificio de Oficinas Santa María Offices",
+    "location": "Chile",
+    "year": "2015",
+    "client": "BAU Ingenieros Consultores",
+    "area": "16,300 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "OFI-10",
+    "typology": "oficinas",
+    "name": "Modelo BIM As Built Banco Central",
+    "location": "Chile",
+    "year": "2014/2015",
+    "client": "Banco Central",
+    "area": "23,000 m²",
+    "description": "Modelo As Built",
+    "services": [
+      "Modelado As-Built"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  },
+  {
+    "code": "VIV-15",
+    "typology": "vivienda",
+    "name": "Edificio Mirador de Ñuñoa",
+    "location": "Chile",
+    "year": "2012",
+    "client": "",
+    "area": "41,300 m²",
+    "description": "Coordinación BIM. Modelación y coordinación de especialidades.",
+    "services": [
+      "Coordinacion BIM",
+      "Modelado MEP"
+    ],
+    "status": "Finalizado",
+    "software": [
+      "Revit",
+      "Navisworks"
+    ],
+    "card_size": "md",
+    "image_count": 0,
+    "has_images": false,
+    "images": []
+  }
+]

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portafolio — Test Airtable</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f6f6f4;
+    --ink: #0e0e0e;
+    --ink-soft: #4a4a48;
+    --ink-mute: #8a8680;
+    --accent: #0A4D8C;
+    --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 32px clamp(20px, 4vw, 56px) 100px; }
+
+  .banner {
+    background: #1a1a1a;
+    color: #f4f1ea;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding: 10px 16px;
+  }
+  .banner b { color: #ff9d6c; }
+
+  .setup {
+    border: 1px solid var(--ink);
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .setup label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .setup input {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--ink);
+    background: var(--bg);
+    color: var(--ink);
+    flex: 1;
+    min-width: 260px;
+  }
+  .setup button {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
+    cursor: pointer;
+  }
+  .setup button:hover { background: var(--accent); border-color: var(--accent); }
+  .setup-note { width: 100%; font-size: 12px; color: var(--ink-mute); }
+
+  h1 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .status {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin: 20px 0;
+  }
+  .status.error { color: #b3261e; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .card {
+    border: 1px solid var(--ink);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: var(--bg);
+    transition: box-shadow 0.15s ease;
+  }
+  .card:hover { box-shadow: 4px 4px 0 var(--ink); }
+  .card-img {
+    aspect-ratio: 4/3;
+    background: var(--bg-alt);
+    overflow: hidden;
+    position: relative;
+  }
+  .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card-img .noimg {
+    display: flex; align-items: center; justify-content: center;
+    height: 100%; font-family: var(--font-mono); font-size: 11px;
+    color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .card-star {
+    position: absolute; top: 8px; right: 8px;
+    background: var(--accent); color: #fff;
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 8px;
+  }
+  .card-body { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .card-ty {
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute);
+  }
+  .card-name { font-size: 17px; font-weight: 500; line-height: 1.25; }
+  .card-meta {
+    font-family: var(--font-mono); font-size: 11px; color: var(--ink-mute);
+    margin-top: auto; padding-top: 8px;
+    display: flex; justify-content: space-between;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .tag {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.04em;
+    padding: 3px 8px; border: 1px solid var(--rule-soft, #ccc); color: var(--ink-soft);
+  }
+
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(14,14,14,0.7);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px; z-index: 100;
+  }
+  .modal {
+    background: var(--bg); width: min(720px, 100%); max-height: 88vh;
+    overflow-y: auto; padding: 32px; border: 1px solid var(--ink); position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 16px; right: 16px;
+    width: 36px; height: 36px; border: 1px solid var(--ink);
+    background: var(--bg); cursor: pointer; font-family: var(--font-mono); font-size: 16px;
+  }
+  .modal-code { font-family: var(--font-mono); color: var(--accent); font-size: 12px; letter-spacing: 0.08em; }
+  .modal-title { font-size: clamp(22px, 3vw, 32px); font-weight: 500; margin: 8px 0 16px; }
+  .modal-imgs { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: 8px; margin-bottom: 20px; }
+  .modal-imgs img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+  dl.ficha { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; font-family: var(--font-mono); font-size: 13px; }
+  .ficha-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee; grid-column: span 2; }
+  .ficha-row dt { color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.06em; }
+  .ficha-row dd { margin: 0; text-align: right; max-width: 60%; }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  PÁGINA DE PRUEBA — no es el sitio real. Conecta en vivo a Airtable, solo visible para ti mientras esta pestaña esté abierta. El token nunca se guarda en el código.
+</div>
+
+<div class="wrap">
+  <div class="setup">
+    <label style="width:100%">Airtable Personal Access Token</label>
+    <input id="tokenInput" type="password" placeholder="pat_xxx... (pégalo aquí, solo para esta prueba)" autocomplete="off" />
+    <button id="loadBtn">Cargar proyectos</button>
+    <div class="setup-note">El token se guarda solo en este navegador (localStorage), no se envía a ningún lado salvo directo a Airtable. Bórralo cuando termines de probar.</div>
+  </div>
+
+  <span class="kicker">Prueba de integración</span>
+  <h1>Portafolio — vía Airtable</h1>
+  <div id="status" class="status">Ingresa tu token y presiona "Cargar proyectos".</div>
+  <div id="grid" class="grid"></div>
+</div>
+
+<div id="modalRoot"></div>
+
+<script>
+const BASE_ID = "appcfnhyOaMOMJjsc";
+const TABLE = "Proyectos";
+const TOKEN_KEY = "airtable_test_token";
+
+const tokenInput = document.getElementById("tokenInput");
+const loadBtn = document.getElementById("loadBtn");
+const statusEl = document.getElementById("status");
+const gridEl = document.getElementById("grid");
+const modalRoot = document.getElementById("modalRoot");
+
+try {
+  const saved = localStorage.getItem(TOKEN_KEY);
+  if (saved) tokenInput.value = saved;
+} catch (e) {}
+
+function setStatus(msg, isError) {
+  statusEl.textContent = msg;
+  statusEl.className = "status" + (isError ? " error" : "");
+}
+
+async function fetchAllRecords(token) {
+  let all = [];
+  let offset = null;
+  const filter = encodeURIComponent("{Publicado}=1");
+  do {
+    const url = `https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(TABLE)}?filterByFormula=${filter}${offset ? "&offset=" + offset : ""}`;
+    const res = await fetch(url, { headers: { Authorization: "Bearer " + token } });
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`Airtable ${res.status}: ${text.slice(0, 200)}`);
+    }
+    const data = await res.json();
+    all = all.concat(data.records || []);
+    offset = data.offset || null;
+  } while (offset);
+  return all;
+}
+
+function renderGrid(records) {
+  gridEl.innerHTML = "";
+  if (!records.length) {
+    setStatus("Sin resultados — revisa que existan filas con Publicado = 1.", false);
+    return;
+  }
+  records.forEach((rec) => {
+    const f = rec.fields || {};
+    const imgs = f["Archivos adjuntos"] || [];
+    const services = f["Servicios"] || [];
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="card-img">
+        ${imgs.length
+          ? `<img src="${imgs[0].thumbnails ? imgs[0].thumbnails.large.url : imgs[0].url}" alt="" loading="lazy" />`
+          : `<div class="noimg">Sin imagen</div>`}
+        ${f["Destacado"] ? `<div class="card-star">Destacado</div>` : ""}
+      </div>
+      <div class="card-body">
+        <div class="card-ty">${f["Tipología"] || ""}</div>
+        <div class="card-name">${f["Proyecto"] || "(sin nombre)"}</div>
+        <div class="tags">${services.map((s) => `<span class="tag">${s}</span>`).join("")}</div>
+        <div class="card-meta">
+          <span>${f["Código"] || ""}</span>
+          <span>${f["Año"] || ""}</span>
+        </div>
+      </div>
+    `;
+    card.addEventListener("click", () => openModal(f));
+    gridEl.appendChild(card);
+  });
+}
+
+function openModal(f) {
+  const imgs = f["Archivos adjuntos"] || [];
+  const services = f["Servicios"] || [];
+  modalRoot.innerHTML = `
+    <div class="modal-overlay" id="overlay">
+      <div class="modal">
+        <button class="modal-close" id="closeBtn">✕</button>
+        <div class="modal-code">${f["Código"] || ""}</div>
+        <div class="modal-title">${f["Proyecto"] || ""}</div>
+        ${imgs.length ? `<div class="modal-imgs">${imgs.map((im) => `<img src="${im.thumbnails ? im.thumbnails.large.url : im.url}" alt="" loading="lazy" />`).join("")}</div>` : ""}
+        <dl class="ficha">
+          <div class="ficha-row"><dt>Mandante</dt><dd>${f["Cliente"] || "—"}</dd></div>
+          <div class="ficha-row"><dt>Año</dt><dd>${f["Año"] || "—"}</dd></div>
+          <div class="ficha-row"><dt>Tipología</dt><dd>${f["Tipología"] || "—"}</dd></div>
+          <div class="ficha-row"><dt>Superficie</dt><dd>${f["Superficie (m2)"] ? f["Superficie (m2)"] + " m²" : "—"}</dd></div>
+          <div class="ficha-row"><dt>Servicios</dt><dd>${services.join(", ") || "—"}</dd></div>
+          <div class="ficha-row"><dt>Descripción</dt><dd>${f["Descripción"] || "—"}</dd></div>
+        </dl>
+      </div>
+    </div>
+  `;
+  document.getElementById("closeBtn").addEventListener("click", closeModal);
+  document.getElementById("overlay").addEventListener("click", (e) => { if (e.target.id === "overlay") closeModal(); });
+}
+function closeModal() { modalRoot.innerHTML = ""; }
+
+async function load() {
+  const token = tokenInput.value.trim();
+  if (!token) {
+    setStatus("Falta el token.", true);
+    return;
+  }
+  try { localStorage.setItem(TOKEN_KEY, token); } catch (e) {}
+  setStatus("Cargando desde Airtable…", false);
+  gridEl.innerHTML = "";
+  try {
+    const records = await fetchAllRecords(token);
+    setStatus(`${records.length} proyecto(s) publicado(s) cargados desde Airtable.`, false);
+    renderGrid(records);
+  } catch (err) {
+    setStatus("Error: " + err.message, true);
+  }
+}
+
+loadBtn.addEventListener("click", load);
+tokenInput.addEventListener("keydown", (e) => { if (e.key === "Enter") load(); });
+</script>
+</body>
+</html>

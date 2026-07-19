@@ -128,7 +128,7 @@ const TYPOLOGIES = [
   { id: "deportivo",      es: "Deportivo",            en: "Sports" },
 ];
 
-const PROJECTS = [
+const PROJECTS_FALLBACK = [
   {
     code: "EDU-01", typology: "educacional", name: "Sede Duoc Lastarria",
     location: "Chile", year: "2025-2026", client: "Cecilia Puga - Paula Velasco", area: "2,000 m²",
@@ -896,6 +896,10 @@ const PROJECTS = [
     images: [],
   }
 ];;
+
+// Fuente de datos en vivo: se sobreescribe con lo publicado en Airtable
+// (ver app-mount.jsx). Si el fetch falla, esto se queda con PROJECTS_FALLBACK.
+let PROJECTS = PROJECTS_FALLBACK;
 
 // m2 por tipología (datos reales de proyectos)
 const M2_BY_TYPE = [
