@@ -405,10 +405,8 @@ img { max-width: 100%; display: block; }
   opacity: 0.35;
   filter: blur(4px);
 }
-@media (prefers-reduced-motion: reduce) {
-  .signal-line.beat { animation: none; stroke-opacity: 0.3; }
-  .heroB-signals { display: none; }
-}
+/* Las líneas/puntos animados del hero se mantienen siempre activos,
+   por decisión explícita — no se ocultan con prefers-reduced-motion. */
 .heroB .hero-status { border-bottom-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.7); position: relative; z-index: 2; }
 .heroB-hdr { color: var(--bg) !important; }
 .heroB-grid {
