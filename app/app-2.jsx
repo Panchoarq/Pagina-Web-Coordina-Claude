@@ -135,9 +135,18 @@ const SERVICE_ICONS = {
   "Detallismo":           { es: "Detallismo",             en: "Detailing",          glyph: "quarter"    },
 };
 
+// Índice normalizado (sin tildes/guiones/mayúsculas) para no depender de
+// que el texto de Airtable coincida letra por letra con estas llaves.
+const SERVICE_ICONS_NORM = Object.fromEntries(
+  Object.entries(SERVICE_ICONS).map(([k, v]) => [normalizeServiceKey(k), v])
+);
+function findServiceDef(name) {
+  return SERVICE_ICONS_NORM[normalizeServiceKey(name)] || null;
+}
+
 function ServiceIcon({ name, lang }) {
   const [show, setShow] = useState(false);
-  const def = SERVICE_ICONS[name];
+  const def = findServiceDef(name);
   const label = def ? (lang === "es" ? def.es : def.en) : name;
   const glyphKind = def ? def.glyph : "circle";
   return (

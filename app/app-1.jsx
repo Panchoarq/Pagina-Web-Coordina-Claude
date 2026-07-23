@@ -947,12 +947,21 @@ function filterProjects(list, kind, value) {
   return list;
 }
 
+// Normaliza nombres de servicio para comparar sin depender de tildes,
+// guiones o mayúsculas (Airtable puede tener "Modelado As Built" mientras
+// el código espera "Modelado As-Built" — deben matchear igual).
+function normalizeServiceKey(s) {
+  return String(s || "").trim().toLowerCase()
+    .normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[-\s]+/g, " ").trim();
+}
+
 // Tags de imagen (según nombre de archivo, ver api/projects.js) que
 // corresponden a un servicio filtrable específico. El resto de las fotos
 // (sin tag) son genéricas y sirven para cualquier otro servicio.
 const SERVICE_IMAGE_TAG = {
-  "Escaneo laser 3D": "NP",
-  "Modelado As-Built": "AB",
+  [normalizeServiceKey("Escaneo laser 3D")]: "NP",
+  [normalizeServiceKey("Modelado As-Built")]: "AB",
 };
 
 // Dado un proyecto y el filtro activo, devuelve el subconjunto de imágenes
@@ -962,7 +971,7 @@ const SERVICE_IMAGE_TAG = {
 function imagesForServiceFilter(project, filter) {
   const all = project.images || [];
   if (filter.kind !== "service" || !all.length) return all;
-  const wantTag = SERVICE_IMAGE_TAG[filter.value];
+  const wantTag = SERVICE_IMAGE_TAG[normalizeServiceKey(filter.value)];
   if (wantTag) return all.filter((img) => img.tag === wantTag);
   const generic = all.filter((img) => !img.tag);
   return generic.length ? generic : all;
@@ -982,4 +991,4 @@ function sortProjects(list, sortBy) {
   return arr;
 }
 
-Object.assign(window, { I18N, SERVICES, TYPOLOGIES, PROJECTS, SAMPLE_IMAGES, M2_BY_TYPE, PORTFOLIO_SUMMARY, filterProjects, sortProjects, imagesForServiceFilter });
+Object.assign(window, { I18N, SERVICES, TYPOLOGIES, PROJECTS, SAMPLE_IMAGES, M2_BY_TYPE, PORTFOLIO_SUMMARY, filterProjects, sortProjects, imagesForServiceFilter, normalizeServiceKey });

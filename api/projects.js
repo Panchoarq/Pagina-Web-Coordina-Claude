@@ -36,14 +36,19 @@ function formatArea(n) {
   return num.toLocaleString("es-CL") + " m²";
 }
 
-// Convención de nombre de archivo: sufijo -NP (nube de puntos) o -AB
-// (as-built) justo antes de la extensión, ej. "CULT-03-11-NP.jpg".
-// Sin sufijo = foto genérica (sirve para el resto de los servicios).
+// Convención de nombre de archivo: sufijo -NP/-ES (nube de puntos /
+// escaneo) o -AB (as-built) justo antes de la extensión, ej.
+// "CULT-03-11-NP.jpg" o "CULT-03-5-ES.jpg". Sin sufijo = foto genérica
+// (sirve para el resto de los servicios).
 function parseImageTag(filename) {
   if (!filename) return { tag: null, cap: "" };
   const noExt = filename.replace(/\.[^.]+$/, "");
-  const m = noExt.match(/-(np|ab)$/i);
-  if (m) return { tag: m[1].toUpperCase(), cap: noExt.slice(0, -(m[1].length + 1)) };
+  const m = noExt.match(/-(np|es|ab)$/i);
+  if (m) {
+    const raw = m[1].toLowerCase();
+    const tag = raw === "ab" ? "AB" : "NP"; // np y es son alias del mismo tag
+    return { tag, cap: noExt.slice(0, -(m[1].length + 1)) };
+  }
   return { tag: null, cap: noExt };
 }
 

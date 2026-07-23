@@ -490,7 +490,7 @@ function FilterBar({ filter, onChange, lang, t }) {
           {lang === "es" ? "Servicio" : "Service"}
         </span>
         {serviceTags.map((tag) => {
-          const def = SERVICE_ICONS[tag];
+          const def = findServiceDef(tag);
           const label = def ? (lang === "es" ? def.es : def.en) : tag;
           const active = filter.kind === "service" && filter.value === tag;
           return (
