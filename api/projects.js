@@ -36,6 +36,17 @@ function formatArea(n) {
   return num.toLocaleString("es-CL") + " m²";
 }
 
+// Convención de nombre de archivo: sufijo -NP (nube de puntos) o -AB
+// (as-built) justo antes de la extensión, ej. "CULT-03-11-NP.jpg".
+// Sin sufijo = foto genérica (sirve para el resto de los servicios).
+function parseImageTag(filename) {
+  if (!filename) return { tag: null, cap: "" };
+  const noExt = filename.replace(/\.[^.]+$/, "");
+  const m = noExt.match(/-(np|ab)$/i);
+  if (m) return { tag: m[1].toUpperCase(), cap: noExt.slice(0, -(m[1].length + 1)) };
+  return { tag: null, cap: noExt };
+}
+
 async function fetchAllRecords(token) {
   let all = [];
   let offset = null;
@@ -57,10 +68,14 @@ async function fetchAllRecords(token) {
 function mapRecord(rec) {
   const f = rec.fields || {};
   const attachments = f["Archivos adjuntos"] || [];
-  const images = attachments.map((att) => ({
-    url: (att.thumbnails && att.thumbnails.large && att.thumbnails.large.url) || att.url,
-    cap: att.filename ? att.filename.replace(/\.[^.]+$/, "") : "",
-  }));
+  const images = attachments.map((att) => {
+    const { tag, cap } = parseImageTag(att.filename);
+    return {
+      url: (att.thumbnails && att.thumbnails.large && att.thumbnails.large.url) || att.url,
+      cap,
+      tag,
+    };
+  });
   const destacado = !!f["Destacado"];
 
   return {

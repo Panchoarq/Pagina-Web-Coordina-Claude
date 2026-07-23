@@ -419,9 +419,27 @@ function Services({ t, lang, onNav }) {
 }
 
 // --- Filter bar for portfolio ---
+function servicePillStyle(active) {
+  return {
+    padding: "8px 16px",
+    borderRadius: 24,
+    border: `1px solid ${active ? "var(--accent)" : "var(--rule-soft)"}`,
+    background: active ? "var(--accent)" : "transparent",
+    color: active ? "var(--accent-ink)" : "var(--ink)",
+    cursor: "pointer",
+    font: "inherit",
+    fontFamily: "var(--font-mono)",
+    fontSize: 11,
+    textTransform: "uppercase",
+    letterSpacing: "0.08em",
+    transition: "all 0.2s",
+  };
+}
+
 function FilterBar({ filter, onChange, lang, t }) {
+  const serviceTags = Array.from(new Set(PROJECTS.flatMap((p) => p.services || []))).sort();
   return (
-    <div className="filter-bar">
+    <div className="filter-bar" style={{ flexDirection: "column", alignItems: "stretch", gap: 12 }}>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
         <button
           onClick={() => onChange({ kind: "typology", value: "all" })}
@@ -467,6 +485,26 @@ function FilterBar({ filter, onChange, lang, t }) {
           </button>
         ))}
       </div>
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-mute)" }}>
+          {lang === "es" ? "Servicio" : "Service"}
+        </span>
+        {serviceTags.map((tag) => {
+          const def = SERVICE_ICONS[tag];
+          const label = def ? (lang === "es" ? def.es : def.en) : tag;
+          const active = filter.kind === "service" && filter.value === tag;
+          return (
+            <button
+              key={tag}
+              onClick={() => onChange(active ? { kind: "typology", value: "all" } : { kind: "service", value: tag })}
+              className={`filter-pill ${active ? "is-active" : ""}`}
+              style={servicePillStyle(active)}
+            >
+              {label}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -476,7 +514,11 @@ function PortfolioSection({ t, lang, onOpen, showIntro = true, sortBy = "default
   const [filter, setFilter] = React.useState({ kind: "typology", value: "all" });
   const filtered = (() => {
     let base = filterProjects(PROJECTS, filter.kind, filter.value);
-    return sortProjects(base, sortBy);
+    base = sortProjects(base, sortBy);
+    if (filter.kind === "service") {
+      base = base.map((p) => ({ ...p, images: imagesForServiceFilter(p, filter) }));
+    }
+    return base;
   })();
 
   return (

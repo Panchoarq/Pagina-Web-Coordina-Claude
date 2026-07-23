@@ -947,6 +947,27 @@ function filterProjects(list, kind, value) {
   return list;
 }
 
+// Tags de imagen (según nombre de archivo, ver api/projects.js) que
+// corresponden a un servicio filtrable específico. El resto de las fotos
+// (sin tag) son genéricas y sirven para cualquier otro servicio.
+const SERVICE_IMAGE_TAG = {
+  "Escaneo laser 3D": "NP",
+  "Modelado As-Built": "AB",
+};
+
+// Dado un proyecto y el filtro activo, devuelve el subconjunto de imágenes
+// que corresponde mostrar. Filtro por categoría (o "todos") = todas las
+// fotos. Filtro por un servicio con tag propio (NP/AB) = solo esas fotos.
+// Filtro por cualquier otro servicio = solo fotos genéricas (sin tag).
+function imagesForServiceFilter(project, filter) {
+  const all = project.images || [];
+  if (filter.kind !== "service" || !all.length) return all;
+  const wantTag = SERVICE_IMAGE_TAG[filter.value];
+  if (wantTag) return all.filter((img) => img.tag === wantTag);
+  const generic = all.filter((img) => !img.tag);
+  return generic.length ? generic : all;
+}
+
 function sortProjects(list, sortBy) {
   const arr = [...list];
   if (sortBy === "year") {
@@ -961,4 +982,4 @@ function sortProjects(list, sortBy) {
   return arr;
 }
 
-Object.assign(window, { I18N, SERVICES, TYPOLOGIES, PROJECTS, SAMPLE_IMAGES, M2_BY_TYPE, PORTFOLIO_SUMMARY, filterProjects, sortProjects });
+Object.assign(window, { I18N, SERVICES, TYPOLOGIES, PROJECTS, SAMPLE_IMAGES, M2_BY_TYPE, PORTFOLIO_SUMMARY, filterProjects, sortProjects, imagesForServiceFilter });

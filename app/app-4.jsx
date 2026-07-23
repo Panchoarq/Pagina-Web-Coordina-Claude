@@ -12,7 +12,11 @@ function PortfolioPage({ t, lang, initialFilter = "all", onOpen, onBack, sortBy 
   const [filter, setFilter] = React.useState(initFilter);
   const filtered = (() => {
     let base = filterProjects(PROJECTS, filter.kind, filter.value);
-    return sortProjects(base, sortBy);
+    base = sortProjects(base, sortBy);
+    if (filter.kind === "service") {
+      base = base.map((p) => ({ ...p, images: imagesForServiceFilter(p, filter) }));
+    }
+    return base;
   })();
   const activeTy = filter.kind === "typology" ? TYPOLOGIES.find((ty) => ty.id === filter.value) : null;
   const activeSrv = filter.kind === "service" ? SERVICES.find((s) => s.tag === filter.value) : null;
