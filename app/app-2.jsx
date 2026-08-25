@@ -377,6 +377,13 @@ function FichaModal({ project, lang, t, onClose }) {
               ))}
             </dl>
 
+            {project.comment && (
+              <div className="modal-comment">
+                <span className="modal-comment-label">{t.comment}</span>
+                <p className="modal-comment-body">{project.comment}</p>
+              </div>
+            )}
+
             {imgs.length > 0 && (
               <div className="modal-photo-label">
                 <span className="gallery-ctr-n">{imgs.length}</span> {t.photos || "fotos"}

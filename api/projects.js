@@ -83,6 +83,9 @@ function mapRecord(rec) {
     };
   });
   const destacado = !!f["Destacado"];
+  // El comentario solo sale del servidor si su propio checkbox esta
+  // activado -- independiente de si el proyecto esta Publicado.
+  const comment = f["Comentario publicado"] ? (f["Comentario"] || "") : "";
 
   return {
     code: f["Código"] || "",
@@ -93,6 +96,7 @@ function mapRecord(rec) {
     client: f["Cliente"] || "",
     area: formatArea(f["Superficie (m2)"]),
     desc: f["Descripción"] || "",
+    comment,
     services: f["Servicios"] || [],
     status: f["Estado"] || "Finalizado",
     software: f["Software"] || [],

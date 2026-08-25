@@ -1394,6 +1394,27 @@ img { max-width: 100%; display: block; }
   border-top: 1px dashed var(--rule-soft);
 }
 
+.modal-comment {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--rule-soft);
+}
+.modal-comment-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 8px;
+}
+.modal-comment-body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
 /* ── Lightbox / fullscreen zoom ── */
 .lightbox {
   position: fixed;
