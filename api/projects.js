@@ -18,6 +18,7 @@ const TYPOLOGY_MAP = {
   "cultural": "cultural",
   "hoteleria": "hoteleria",
   "hotelería": "hoteleria",
+  "hotel": "hoteleria",
   "industrial": "industrial",
   "deportivo": "deportivo",
 };
