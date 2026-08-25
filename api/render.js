@@ -108,7 +108,7 @@ module.exports = async (req, res) => {
 
   let template;
   try {
-    template = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf-8");
+    template = fs.readFileSync(path.join(__dirname, "..", "template.html"), "utf-8");
   } catch (err) {
     res.status(500).send("No se pudo cargar la plantilla del sitio.");
     return;
