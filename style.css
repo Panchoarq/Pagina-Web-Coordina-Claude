@@ -1356,6 +1356,12 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   color: var(--ink-mute);
 }
+.modal-desc {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
 .ficha {
   margin: 4px 0 0;
   display: flex;

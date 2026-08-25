@@ -367,6 +367,7 @@ function FichaModal({ project, lang, t, onClose }) {
             </div>
             <h2 className="modal-title">{project.name}</h2>
             <div className="modal-sub">{ty ? ty[lang] : ""} — {project.year}</div>
+            {project.desc && <p className="modal-desc">{project.desc}</p>}
 
             <dl className="ficha">
               {rows.map(([k, v]) => (
