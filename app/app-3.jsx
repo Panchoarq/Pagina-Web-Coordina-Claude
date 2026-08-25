@@ -5,16 +5,18 @@ function Header({ lang, setLang, t, onNav, onOpenTweaks, dark = false }) {
   return (
     <header className={`hdr ${dark ? "heroB-hdr" : ""}`} style={dark ? { background: "var(--ink)", color: "var(--bg)", borderColor: "rgba(255,255,255,0.2)" } : {}}>
       <div className="hdr-inner">
-        <a className="hdr-logo" href="#home" onClick={(e) => { e.preventDefault(); onNav && onNav("home"); }}>
-          <img src="logo-coordina-clean.png" alt="coordina BIM Consulting" className="hdr-logo-img" style={{ height: 60, width: "auto" }} />
-        </a>
-        <nav className="hdr-nav">
+        <nav className="hdr-nav hdr-nav-left">
           <a href="#work" onClick={(e) => { e.preventDefault(); onNav && onNav("portfolio"); }}>{t.nav.work}</a>
           <a href="#services" onClick={(e) => { e.preventDefault(); onNav && onNav("services"); }}>{t.nav.services}</a>
-          <a href="#about" onClick={(e) => e.preventDefault()}>{t.nav.about}</a>
-          <a href="#contact" onClick={(e) => { e.preventDefault(); onNav && onNav("contact"); }}>{t.nav.contact}</a>
         </nav>
+        <a className="hdr-logo" href="#home" onClick={(e) => { e.preventDefault(); onNav && onNav("home"); }}>
+          <img src={dark ? "logo-coordina-dark.png" : "logo-coordina-clean.png"} alt="coordina BIM Consulting" className="hdr-logo-img" style={{ height: 60, width: "auto" }} />
+        </a>
         <div className="hdr-right">
+          <nav className="hdr-nav hdr-nav-right">
+            <a href="#about" onClick={(e) => e.preventDefault()}>{t.nav.about}</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); onNav && onNav("contact"); }}>{t.nav.contact}</a>
+          </nav>
           <div className="lang-toggle" style={dark ? { borderColor: "var(--bg)" } : {}}>
             <button className={lang === "es" ? "is-active" : ""} onClick={() => setLang("es")} style={dark && lang !== "es" ? { color: "var(--bg)" } : {}}>ES</button>
             <button className={lang === "en" ? "is-active" : ""} onClick={() => setLang("en")} style={dark && lang !== "en" ? { color: "var(--bg)" } : {}}>EN</button>
