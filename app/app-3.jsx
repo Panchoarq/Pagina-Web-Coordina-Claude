@@ -10,7 +10,7 @@ function Header({ lang, setLang, t, onNav, onOpenTweaks, dark = false }) {
           <a href="#services" onClick={(e) => { e.preventDefault(); onNav && onNav("services"); }}>{t.nav.services}</a>
         </nav>
         <a className="hdr-logo" href="#home" onClick={(e) => { e.preventDefault(); onNav && onNav("home"); }}>
-          <img src={dark ? "logo-coordina-dark.png" : "logo-coordina-clean.png"} alt="coordina BIM Consulting" className="hdr-logo-img" style={{ height: 60, width: "auto" }} />
+          <img src={dark ? "logo-coordina-dark.png" : "logo-coordina-clean.png"} alt="coordina BIM Consulting" className="hdr-logo-img" style={{ height: 120, width: "auto" }} />
         </a>
         <div className="hdr-right">
           <nav className="hdr-nav hdr-nav-right">
