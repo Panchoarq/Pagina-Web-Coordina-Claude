@@ -65,8 +65,10 @@ function Site({ tweaks }) {
     if (target === "home") {
       setView("home");
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 0);
-    } else if (target === "portfolio") {
-      setView("portfolio");
+    } else if (target.startsWith("portfolio")) {
+      // Cubre "portfolio" a secas y deep-links tipo "portfolio:service:X"
+      // o "portfolio:<typologyId>" (ver Services y el filtro de tipologia).
+      setView(target);
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 0);
     } else {
       const el = document.getElementById(target);
@@ -82,7 +84,7 @@ function Site({ tweaks }) {
           <HeroB t={t} lang={lang} />
           <Experience t={t} lang={lang} />
           <PortfolioSummary t={t} lang={lang} />
-          <Services t={t} lang={lang} />
+          <Services t={t} lang={lang} onNav={nav} />
           <PortfolioSection t={t} lang={lang} onOpen={setOpenProject} sortBy={tweaks.sort} />
           <Contact t={t} />
         </>
@@ -91,7 +93,7 @@ function Site({ tweaks }) {
         <PortfolioPage
           t={t}
           lang={lang}
-          initialFilter={view.split(":")[1] || "all"}
+          initialFilter={view.includes(":") ? view.slice(view.indexOf(":") + 1) : "all"}
           onOpen={setOpenProject}
           onBack={() => nav("home")}
           sortBy={tweaks.sort}
