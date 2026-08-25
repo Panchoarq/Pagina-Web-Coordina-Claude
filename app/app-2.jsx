@@ -201,6 +201,37 @@ function ProjectCard({ project, lang, onOpen, index }) {
   );
 }
 
+// ---------- Service description modal (texto largo, sin galeria) ----------
+function ServiceInfoModal({ service, lang, onClose }) {
+  useEffect(() => {
+    if (!service) return;
+    const handleKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [service, onClose]);
+
+  if (!service) return null;
+  const name = lang === "es" ? service.es : service.en;
+  const body = lang === "es"
+    ? (service.long_es || service.desc_es)
+    : (service.long_en || service.desc_en);
+
+  return (
+    <div className="modal-root" onClick={onClose}>
+      <div className="modal modal-simple" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose} aria-label={lang === "es" ? "Cerrar" : "Close"}>
+          <Glyph kind="cross" size={20} />
+        </button>
+        <div className="modal-simple-inner">
+          <span className="modal-code">{service.num}</span>
+          <h2 className="modal-title" style={{ marginTop: 8 }}>{name}</h2>
+          <p className="modal-simple-body">{body}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ---------- Ficha técnica modal with gallery + fullscreen lightbox ----------
 function FichaModal({ project, lang, t, onClose }) {
   const [activeImg, setActiveImg] = useState(0);

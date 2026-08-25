@@ -7,7 +7,7 @@ const I18N = {
     heroTitle1: "Construir antes de construir.",
     heroTitle2: "Modelos 3D que resuelven obras reales.",
     heroTitle3: "Precision digital. Decisiones concretas.",
-    heroBody: "Coordinamos proyectos de arquitectura, MEP y estructura mediante metodologia BIM. Detectamos conflictos, cuantificamos y acompanamos en obra — desde el primer modelo hasta el as-built.",
+    heroBody: "Somos asesores BIM para proyectos de arquitectura, MEP y estructura: desde la definicion de estandares y metodologias de trabajo y la revision de modelos, hasta cubrir todo el espectro de aplicaciones BIM a lo largo del ciclo de diseno y obra — desde el primer modelo hasta el as-built.",
     ctaWork: "Ver portafolio",
     ctaContact: "Agendar llamada",
     stats: [
@@ -17,8 +17,8 @@ const I18N = {
       { n: "2.4M", l: "m2 modelados" },
     ],
     expKicker: "Experiencia",
-    expTitle: "33 años de trayectoria, 22 vinculados al BIM",
-    expBody: "coordina Bim Consulting nace de un equipo con 33 anos de experiencia profesional, de los cuales cerca de 22 estan vinculados al mundo BIM y 18 dedicados al mundo de la coordinacion de proyectos. Habiendo previamente disenado y construido proyectos mediante BIM, esta trayectoria nos permite anticipar conflictos antes de que lleguen a la obra y sostener la coordinacion de proyectos de gran complejidad.",
+    expTitle: "33 años de trayectoria, 22 dedicados a las asesorías BIM",
+    expBody: "coordina Bim Consulting nace como oficina de diseno y, a lo largo de mas de 33 anos de trayectoria, evoluciona hacia una consultora especializada en asesorias BIM aplicadas a proyectos de arquitectura e ingenieria en todas sus etapas. Ese recorrido nos ha permitido participar en proyectos emblematicos como los modelos iniciales del Aeropuerto Internacional de Santiago, el Centro Cultural GAM, la asesoria y definicion de la politica BIM del Banco Central para su proyecto Central de Efectivo, y hospitales de alta complejidad a lo largo de Chile.",
     expComplex: "Tipologias que dominamos",
     expComplexList: ["Salud", "Vivienda", "Oficinas", "Retail", "Infraestructura", "Educacional", "Cultural", "Hoteleria", "Industrial", "Deportivo"],
     expHighlights: [
@@ -58,7 +58,7 @@ const I18N = {
     heroTitle1: "Build before building.",
     heroTitle2: "3D models that solve real construction.",
     heroTitle3: "Digital precision. Concrete decisions.",
-    heroBody: "We coordinate architecture, MEP and structural projects through BIM methodology. Clash detection, quantities and on-site support — from the first model to as-built.",
+    heroBody: "We are BIM advisors for architecture, MEP and structural projects: from defining work standards and methodologies and reviewing models, to covering the full spectrum of BIM applications across the design-to-construction cycle — from the first model to as-built.",
     ctaWork: "See portfolio",
     ctaContact: "Book a call",
     stats: [
@@ -68,8 +68,8 @@ const I18N = {
       { n: "2.4M", l: "m2 modeled" },
     ],
     expKicker: "Experience",
-    expTitle: "33 years, 22 linked to BIM",
-    expBody: "coordina BIM Consulting is born from a team with 33 years of professional experience, of which about 22 are linked to the BIM world and 18 dedicated to project coordination. Having previously designed and built projects using BIM, this track record allows us to anticipate conflicts before they reach the site.",
+    expTitle: "33 years, 22 dedicated to BIM advisory",
+    expBody: "coordina Bim Consulting began as a design office and, over more than 33 years, evolved into a firm specialized in BIM advisory applied to architecture and engineering projects at every stage. That track record has included landmark projects such as the initial models for Santiago International Airport, the GAM Cultural Center, BIM policy advisory and definition for the Central Bank's Centro de Efectivo project, and highly complex hospitals across Chile.",
     expComplex: "Typologies we master",
     expComplexList: ["Healthcare", "Residential", "Offices", "Retail", "Infrastructure", "Education", "Cultural", "Hospitality", "Industrial", "Sports"],
     summaryKicker: "Summary",
@@ -105,14 +105,22 @@ const I18N = {
 };
 
 const SERVICES = [
-  { num: "01", es: "Planificacion BIM", en: "BIM Planning", tag: "BIM Management", desc_es: "BEP, roles y flujos de informacion desde el kickoff.", desc_en: "BEP, roles and information flows from kickoff." },
-  { num: "02", es: "Modelado BIM - Arquitectura / MEP / Civil", en: "BIM Modeling - Architecture / MEP / Civil", tag: "Modelado MEP", desc_es: "Modelos LOD 200-400 multidisciplina, federados y auditados.", desc_en: "Multi-discipline LOD 200-400 models, federated and audited." },
-  { num: "03", es: "Deteccion de conflictos", en: "Clash detection", tag: "Coordinacion BIM", desc_es: "Clash detection sistematico con reportes y seguimiento semanal.", desc_en: "Systematic clash detection with reports and weekly tracking." },
-  { num: "04", es: "Coordinacion BIM", en: "BIM Coordination", tag: "Coordinacion BIM", desc_es: "Reuniones, matriz de responsabilidades y resolucion en modelo.", desc_en: "Meetings, responsibility matrix and in-model resolution." },
-  { num: "05", es: "Cubicaciones y cantidades", en: "Quantities & takeoffs", tag: null, desc_es: "Extraccion parametrica, control de partidas y presupuestos.", desc_en: "Parametric extraction, cost control and budgeting." },
-  { num: "06", es: "Escaneo laser 3D", en: "3D Laser Scanning", tag: "Escaneo laser 3D", desc_es: "Nubes de puntos de alta precision para obra y patrimonio.", desc_en: "High-precision point clouds for construction and heritage." },
-  { num: "07", es: "Modelos As-Built", en: "As-Built Models", tag: "Modelado As-Built", desc_es: "Modelos post-construccion verificables contra realidad.", desc_en: "Post-construction models verifiable against reality." },
-  { num: "08", es: "Soporte en terreno", en: "On-site Support", tag: "Asesoria en Obra", desc_es: "Acompanamiento continuo en obra, resolucion en tiempo real.", desc_en: "Continuous on-site support, real-time resolution." },
+  { num: "01", es: "Asesoria BIM", en: "BIM Advisory", tag: "BIM Management", desc_es: "BEP, roles y flujos de informacion desde el kickoff.", desc_en: "BEP, roles and information flows from kickoff.",
+    long_es: "Acompanamiento a empresas en sus procesos BIM, desde definicion de objetivos y estandares hasta el rol de Gestion BIM y BIM Manager dentro de la organizacion. Incluye revision de modelos y entregables, validando cumplimiento de estandares y calidad antes de avanzar en el proyecto. Orientado a equipos que ya ejecutan BIM y buscan un asesor senior externo que oriente decisiones y controle resultados." },
+  { num: "02", es: "Modelado BIM - Arquitectura / MEP / Civil", en: "BIM Modeling - Architecture / MEP / Civil", tag: "Modelado MEP", desc_es: "Modelos LOD 200-400 multidisciplina, federados y auditados.", desc_en: "Multi-discipline LOD 200-400 models, federated and audited.",
+    long_es: "Desarrollo de modelos en LOD 200 a 400, multidisciplina, federados y auditados. Este modelado se realiza tanto como parte de un encargo de coordinacion, donde asumimos el modelado de todas las especialidades de un proyecto (o las que se requieran), como en encargos puntuales de modelado de una sola especialidad." },
+  { num: "03", es: "Deteccion de conflictos", en: "Clash detection", tag: "Coordinacion BIM", desc_es: "Clash detection sistematico con reportes y seguimiento semanal.", desc_en: "Systematic clash detection with reports and weekly tracking.",
+    long_es: "Aplicamos una metodologia propia, desarrollada durante los ultimos anos, para registrar y documentar sistematicamente los puntos de conflicto entre especialidades. El proceso genera documentacion planimetrica del resultado final coordinado del proyecto, materializada en fichas especiales y en el trabajo directo mediante los modulos de coordinacion de la plataforma." },
+  { num: "04", es: "Coordinacion BIM", en: "BIM Coordination", tag: "Coordinacion BIM", desc_es: "Reuniones, matriz de responsabilidades y resolucion en modelo.", desc_en: "Meetings, responsibility matrix and in-model resolution.",
+    long_es: "Actuamos como asesores y coordinadores generales del proyecto, integrando en un entorno comun de datos los modelos que desarrollan las distintas especialidades. Tambien asumimos este rol cuando el encargo incluye el modelado de todas las especialidades: en ese caso, la deteccion de conflictos y el modelado avanzan en paralelo, realizando una coordinacion inicial durante el proceso para luego continuar con los modelos integrados en los modulos de coordinacion." },
+  { num: "05", es: "Cubicaciones y cantidades", en: "Quantities & takeoffs", tag: null, desc_es: "Extraccion parametrica, control de partidas y presupuestos.", desc_en: "Parametric extraction, cost control and budgeting.",
+    long_es: "Trabajamos con este alcance cuando el cliente requiere modelos orientados especificamente a cubicacion, lo que exige que el nivel de detalle del modelado y de las soluciones constructivas sea muy preciso, reflejando fielmente cada elemento a cuantificar." },
+  { num: "06", es: "Escaneo laser 3D", en: "3D Laser Scanning", tag: "Escaneo laser 3D", desc_es: "Nubes de puntos de alta precision para obra y patrimonio.", desc_en: "High-precision point clouds for construction and heritage.",
+    long_es: "Contamos con escaner laser movil y estatico, de largo alcance y alta precision, y experiencia en levantamientos de infraestructura como aeropuertos, instalaciones hospitalarias y edificios de distinta categoria. Cada levantamiento se planifica pensando en el modelado posterior a partir de la nube de puntos, por lo que nuestra experiencia en BIM aporta una mirada critica sobre como ejecutarlo." },
+  { num: "07", es: "Modelos As-Built", en: "As-Built Models", tag: "Modelado As-Built", desc_es: "Modelos post-construccion verificables contra realidad.", desc_en: "Post-construction models verifiable against reality.",
+    long_es: "Consecuencia directa del escaneo laser: estos levantamientos se realizan pensando en la generacion de informacion As-Built, tanto modelos como planos. Contamos con casos emblematicos que respaldan esta experiencia, como el Aeropuerto Internacional de Santiago, donde se genero el modelo As-Built del terminal y de todas sus instalaciones —central termica, planta de tratamiento de agua— a partir de un levantamiento con escaner laser; y el Teatro GAM Etapa 2, cuya obra inconclusa fue levantada integramente con tecnologia laser, generando un modelo As-Built real desde el cual se desarrollo el proyecto ejecutivo." },
+  { num: "08", es: "Soporte en terreno", en: "On-site Support", tag: "Asesoria en Obra", desc_es: "Acompanamiento continuo en obra, resolucion en tiempo real.", desc_en: "Continuous on-site support, real-time resolution.",
+    long_es: "Asesoria remota o con personal instalado en obra, para el seguimiento de los modelos de coordinacion y la resolucion de problemas de coordinacion que surgen dia a dia. El trabajo se resume en fichas y planos especificos de coordinacion." },
 ];
 
 const TYPOLOGIES = [

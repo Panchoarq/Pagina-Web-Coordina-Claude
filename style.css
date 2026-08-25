@@ -1177,6 +1177,23 @@ img { max-width: 100%; display: block; }
 }
 .modal-close:hover { background: var(--ink); color: var(--bg); }
 
+/* Modal simple (descripcion de servicio: sin galeria, texto solo) */
+.modal.modal-simple {
+  width: min(640px, 100%);
+  max-height: none;
+}
+.modal-simple-inner {
+  padding: 48px 44px;
+  overflow-y: auto;
+}
+.modal-simple-body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 20px 0 0;
+  max-width: 56ch;
+}
+
 .modal-grid {
   display: grid;
   grid-template-columns: 1.7fr 0.85fr;

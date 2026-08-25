@@ -370,6 +370,7 @@ function MetricsPanel({ t, lang }) {
 function Services({ t, lang, onNav }) {
   const glyphs = ["circle", "square", "triangle", "halfCircle", "plus", "ring", "diamond", "quarter"];
   const [hovered, setHovered] = React.useState(null);
+  const [openService, setOpenService] = React.useState(null);
   return (
     <section className="section" id="services">
       <div className="inner">
@@ -403,6 +404,17 @@ function Services({ t, lang, onNav }) {
                 </div>
                 <h3 className="service-name">{lang === "es" ? s.es : s.en}</h3>
                 <p className="service-desc">{lang === "es" ? s.desc_es : s.desc_en}</p>
+                <button
+                  onClick={(e) => { e.stopPropagation(); setOpenService(s); }}
+                  style={{
+                    marginTop: -4, alignSelf: "flex-start", background: "none", border: 0, padding: 0,
+                    font: "inherit", fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.08em",
+                    textTransform: "uppercase", color: "inherit", opacity: 0.65, cursor: "pointer",
+                    textDecoration: "underline", textUnderlineOffset: 3,
+                  }}
+                >
+                  {lang === "es" ? "Leer más" : "Read more"}
+                </button>
                 {clickable && (
                   <div style={{ marginTop: 12, fontSize: 11, fontFamily: "var(--font-mono)", letterSpacing: "0.08em", color: "var(--accent)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <span>{count} {lang === "es" ? "proyectos" : "projects"}</span>
@@ -414,6 +426,7 @@ function Services({ t, lang, onNav }) {
           })}
         </div>
       </div>
+      <ServiceInfoModal service={openService} lang={lang} onClose={() => setOpenService(null)} />
     </section>
   );
 }
