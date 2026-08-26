@@ -76,7 +76,7 @@ function HeroA({ t, lang }) {
 }
 
 // --- HERO B: Dark isometric poster ---
-function HeroB({ t, lang }) {
+function HeroB({ t, lang, onNav }) {
   const bgUrl = (window.__resources && window.__resources.hospitalMep) || "fotos/hospital-mep-inv.jpg";
   return (
     <section className="hero heroB">
@@ -100,8 +100,8 @@ function HeroB({ t, lang }) {
             </h1>
             <p className="hero-body heroB-body" style={{ marginTop: 28 }}>{t.heroBody}</p>
             <div className="heroA-ctas" style={{ marginTop: 28 }}>
-              <a className="btn btn-primary" href="#work">{t.ctaWork} →</a>
-              <a className="btn btn-ghost" href="#services">{t.nav.services}</a>
+              <a className="btn btn-primary" href="#work" onClick={(e) => { e.preventDefault(); onNav && onNav("portfolio"); }}>{t.ctaWork} →</a>
+              <a className="btn btn-ghost" href="#services" onClick={(e) => { e.preventDefault(); onNav && onNav("services"); }}>{t.nav.services}</a>
             </div>
           </div>
           <div className="heroB-clash">
@@ -452,10 +452,23 @@ function servicePillStyle(active) {
 }
 
 function FilterBar({ filter, onChange, lang, t }) {
-  const serviceTags = Array.from(new Set(PROJECTS.flatMap((p) => p.services || []))).sort();
+  // Dedupe defensivo: agrupa por version normalizada (sin tildes/mayus)
+  // para no mostrar dos chips iguales si en Airtable hay variantes de
+  // escritura del mismo servicio (ej. "Coordinacion BIM" vs "Coordinación BIM").
+  const serviceTags = (() => {
+    const seen = new Map();
+    PROJECTS.flatMap((p) => p.services || []).forEach((s) => {
+      const key = normalizeServiceKey(s);
+      if (!seen.has(key)) seen.set(key, s);
+    });
+    return Array.from(seen.values()).sort();
+  })();
   return (
     <div className="filter-bar" style={{ flexDirection: "column", alignItems: "stretch", gap: 12 }}>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-mute)" }}>
+          {lang === "es" ? "Tipología" : "Typology"}
+        </span>
         <button
           onClick={() => onChange({ kind: "typology", value: "all" })}
           className={`filter-pill ${filter.kind === "typology" && filter.value === "all" ? "is-active" : ""}`}
@@ -507,7 +520,7 @@ function FilterBar({ filter, onChange, lang, t }) {
         {serviceTags.map((tag) => {
           const def = findServiceDef(tag);
           const label = def ? (lang === "es" ? def.es : def.en) : tag;
-          const active = filter.kind === "service" && filter.value === tag;
+          const active = filter.kind === "service" && normalizeServiceKey(filter.value) === normalizeServiceKey(tag);
           return (
             <button
               key={tag}

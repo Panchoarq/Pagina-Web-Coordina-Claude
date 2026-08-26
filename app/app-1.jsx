@@ -953,7 +953,10 @@ const SAMPLE_IMAGES = [
 
 function filterProjects(list, kind, value) {
   if (kind === "typology") return list.filter((p) => value === "all" || p.typology === value);
-  if (kind === "service") return list.filter((p) => p.services && p.services.includes(value));
+  if (kind === "service") {
+    const wantKey = normalizeServiceKey(value);
+    return list.filter((p) => p.services && p.services.some((s) => normalizeServiceKey(s) === wantKey));
+  }
   return list;
 }
 

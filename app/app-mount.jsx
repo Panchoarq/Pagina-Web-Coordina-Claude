@@ -118,11 +118,10 @@ function Site({ tweaks }) {
       <Header lang={lang} setLang={setLang} t={t} onNav={nav} dark={view === "home"} />
       {view === "home" && (
         <>
-          <HeroB t={t} lang={lang} />
+          <HeroB t={t} lang={lang} onNav={nav} />
           <Experience t={t} lang={lang} />
           <PortfolioSummary t={t} lang={lang} />
           <Services t={t} lang={lang} onNav={nav} />
-          <PortfolioSection t={t} lang={lang} onOpen={setOpenProject} sortBy={tweaks.sort} />
           <Contact t={t} />
         </>
       )}

@@ -19,10 +19,17 @@ function PortfolioPage({ t, lang, initialFilter = "all", onOpen, onBack, sortBy 
     return base;
   })();
   const activeTy = filter.kind === "typology" ? TYPOLOGIES.find((ty) => ty.id === filter.value) : null;
-  const activeSrv = filter.kind === "service" ? SERVICES.find((s) => s.tag === filter.value) : null;
+  const activeSrv = filter.kind === "service"
+    ? SERVICES.find((s) => normalizeServiceKey(s.tag) === normalizeServiceKey(filter.value))
+    : null;
   const title = activeTy ? (lang === "es" ? activeTy.es : activeTy.en)
     : activeSrv ? (lang === "es" ? activeSrv.es : activeSrv.en)
     : t.worksTitle;
+  const introText = activeSrv
+    ? (lang === "es" ? (activeSrv.long_es || activeSrv.desc_es) : (activeSrv.long_en || activeSrv.desc_en))
+    : (lang === "es"
+        ? "Cada proyecto se coordina bajo la misma metodología: plan BIM, modelado multidisciplinar, detección sistemática de conflictos y seguimiento en obra."
+        : "Every project runs under the same methodology: BIM plan, multi-discipline modeling, systematic clash detection and on-site tracking.");
 
   return (
     <div>
@@ -35,11 +42,7 @@ function PortfolioPage({ t, lang, initialFilter = "all", onOpen, onBack, sortBy 
           <div className="portfolio-hero-inner">
             <h1>{title}<span style={{ color: "var(--accent)" }}>.</span></h1>
             <div className="portfolio-hero-meta">
-              <p className="hero-body" style={{ margin: 0 }}>
-                {lang === "es"
-                  ? "Cada proyecto se coordina bajo la misma metodología: plan BIM, modelado multidisciplinar, detección sistemática de conflictos y seguimiento en obra."
-                  : "Every project runs under the same methodology: BIM plan, multi-discipline modeling, systematic clash detection and on-site tracking."}
-              </p>
+              <p className="hero-body" style={{ margin: 0 }}>{introText}</p>
             </div>
           </div>
         </div>
