@@ -61,18 +61,55 @@ function Site({ tweaks }) {
   const [view, setView] = useState("home");
   const [openProject, setOpenProject] = useState(null);
 
+  // El sitio es un SPA sin rutas reales: cambiar de "view" (home <-> portfolio)
+  // nunca tocaba el historial del navegador. Resultado: el boton Atras (o el
+  // boton "atras" del mouse) no tenia nada dentro del sitio a donde volver y
+  // sacaba directo al usuario de la pagina. Se agrega un entry de historial
+  // por cada cambio de view, y un listener de popstate que sincroniza el
+  // estado de React con lo que el navegador diga que toca mostrar.
+  useEffect(() => {
+    window.history.replaceState({ view: "home" }, "", "#home");
+    const onPopState = (e) => {
+      const v = (e.state && e.state.view) || "home";
+      setView(v);
+      window.scrollTo({ top: 0, behavior: "auto" });
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  const goToView = (target) => {
+    if (target !== view) {
+      window.history.pushState({ view: target }, "", "#" + target);
+    }
+    setView(target);
+  };
+
   const nav = (target) => {
     if (target === "home") {
-      setView("home");
+      goToView("home");
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 0);
     } else if (target.startsWith("portfolio")) {
       // Cubre "portfolio" a secas y deep-links tipo "portfolio:service:X"
       // o "portfolio:<typologyId>" (ver Services y el filtro de tipologia).
-      setView(target);
+      goToView(target);
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 0);
     } else {
-      const el = document.getElementById(target);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      // Secciones como "services"/"contact" solo existen en el DOM cuando
+      // view === "home" (ver el render de <Site> mas abajo). Si estamos en
+      // otra vista (ej. portfolio) hay que volver a home primero y recien
+      // ahi buscar el elemento -- si no, getElementById no encuentra nada
+      // y el link del menu queda sin hacer nada (bug reportado).
+      if (view !== "home") {
+        goToView("home");
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          const el = document.getElementById(target);
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }));
+      } else {
+        const el = document.getElementById(target);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
