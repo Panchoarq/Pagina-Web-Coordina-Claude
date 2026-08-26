@@ -3,7 +3,7 @@ const { useState: useStateH, useEffect: useEffectH } = React;
 
 function Header({ lang, setLang, t, onNav, onOpenTweaks, dark = false }) {
   return (
-    <header className={`hdr ${dark ? "heroB-hdr" : ""}`} style={dark ? { background: "var(--ink)", color: "var(--bg)", borderColor: "rgba(255,255,255,0.2)" } : {}}>
+    <header className={`hdr ${dark ? "heroB-hdr" : ""}`} style={dark ? { background: "#101010", color: "var(--bg)", borderColor: "rgba(255,255,255,0.2)" } : {}}>
       <div className="hdr-inner">
         <nav className="hdr-nav hdr-nav-left">
           <a href="#work" onClick={(e) => { e.preventDefault(); onNav && onNav("portfolio"); }}>{t.nav.work}</a>
