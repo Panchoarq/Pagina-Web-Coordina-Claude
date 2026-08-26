@@ -1,5 +1,18 @@
 # Handoff a Code — Integración Airtable para Portafolio "coordina BIM Consulting"
 
+> ## ✅ ESTADO ACTUAL (actualizado 2026-08-25): YA IMPLEMENTADO Y EN PRODUCCIÓN
+> Este pedido **ya se completó** — no es un documento de trabajo pendiente.
+> El portafolio en `coordinabimconsulting.com` consulta Airtable en vivo,
+> server-side, en cada carga de página (`api/projects.js` + `api/_airtable.js`),
+> con fetch server-side, paginación, y sin cachear URLs de attachments más de
+> 60 segundos, tal como pedía este documento.
+>
+> `portafolio-test.html` y `coordina-proyectos.json` (mencionados abajo como
+> entregables) siguen en el repo solo como referencia histórica — no se usan
+> en producción.
+>
+> Ver **`HANDOFF_CASA.md`** para el estado completo y vigente del proyecto.
+
 ## Objetivo
 Conectar la sección de portafolio del sitio a Airtable como fuente de datos, reemplazando (o sincronizando con) `data.jsx`.
 
@@ -30,10 +43,10 @@ Conectar la sección de portafolio del sitio a Airtable como fuente de datos, re
 3. Manejar **paginación** de Airtable (respuesta trae `offset` si hay más de 100 registros).
 4. Mantener soporte de imagen de portada = primer archivo adjunto del campo "Archivos adjuntos" (mismo criterio que hoy en `data.jsx`, donde el primer elemento del array `images` es la portada).
 
-## Estado actual del sitio (contexto)
-- El sitio real (`src-B-v2.html` + `data.jsx`) hoy usa datos **locales/estáticos** — 75 proyectos cargados manualmente, no conectados a Airtable todavía.
-- Se armó una página de prueba aislada (`portafolio-test.html`) que hace fetch **directo desde el navegador** (token pegado a mano por el usuario, guardado solo en localStorage) — sirve únicamente como maqueta visual de referencia para layout: grid de tarjetas, tags de servicios, modal de ficha con galería. **No es la implementación de producción** — se comparte para que Code tenga una referencia de la UI esperada.
-- Adjunto también `coordina-proyectos.json`: export de los 75 proyectos actuales en `data.jsx` (código, tipología, nombre, ubicación, año, cliente, área, descripción, servicios, estado, software, imágenes) — útil para poblar/verificar contra los registros de Airtable.
+## Estado actual del sitio (histórico — ver banner arriba para el estado vigente)
+- ~~El sitio real (`src-B-v2.html` + `data.jsx`) hoy usa datos **locales/estáticos**~~ — esto era cierto al momento de escribir este documento. Ahora el sitio (`template.html` + `app/*.jsx`) consulta Airtable en vivo; los datos locales (`PROJECTS_FALLBACK` en `app/app-1.jsx`) quedaron solo como respaldo de emergencia.
+- `portafolio-test.html` — maqueta de referencia visual, nunca fue la implementación de producción, se conserva en el repo sin usarse.
+- `coordina-proyectos.json` — export histórico de los 75 proyectos, ya no se usa como fuente de datos (Airtable es la única fuente de verdad).
 
 ## Entregables de este handoff
 - Este documento

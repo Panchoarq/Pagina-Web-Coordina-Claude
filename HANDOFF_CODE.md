@@ -1,6 +1,25 @@
 # Handoff a Code — Conexión Airtable → Portafolio web
 
-Documento de traspaso para implementar la conexión real y segura entre la base de datos de proyectos (Airtable) y la página web del portafolio. Generado: 2026-07-13.
+> ## ✅ ESTADO ACTUAL (actualizado 2026-08-25): YA IMPLEMENTADO Y EN PRODUCCIÓN
+> Este documento describe un pedido que **ya se completó**. La conexión a Airtable
+> está funcionando 100% en vivo en `coordinabimconsulting.com` — todos los
+> proyectos publicados, sus imágenes, servicios, descripción y comentario se
+> traen server-side desde Airtable en cada carga de página (`api/projects.js`
+> + `api/_airtable.js`), con cache corto de 60 segundos.
+>
+> El array `PROJECTS_FALLBACK` en `app/app-1.jsx` sigue existiendo, pero es
+> **solo un respaldo de emergencia** — se usa únicamente si la llamada a
+> Airtable falla por completo. En uso normal, todo el contenido viene de
+> Airtable, no de datos cargados a mano.
+>
+> Para el estado completo y actualizado del proyecto (repo, deploy, Vercel,
+> dominio, cómo retomar el trabajo), ver **`HANDOFF_CASA.md`** — ese es el
+> documento vigente. Este archivo se conserva solo como referencia histórica
+> del pedido original.
+>
+> **No hay que "reemplazar contenido fijo por Airtable" — eso ya pasó.**
+
+Documento de traspaso original para implementar la conexión real y segura entre la base de datos de proyectos (Airtable) y la página web del portafolio. Generado: 2026-07-13.
 
 ---
 
@@ -55,5 +74,12 @@ Authorization: Bearer {AIRTABLE_TOKEN}
 
 ## Al conectar la página real
 
-- Reemplazar el contenido fijo cargado a mano (~17 proyectos con imágenes propias) por la versión dinámica desde Airtable.
-- **No borrar las entradas manuales** hasta confirmar que la versión conectada se ve igual de bien o mejor.
+- ~~Reemplazar el contenido fijo cargado a mano (~17 proyectos con imágenes propias) por la versión dinámica desde Airtable.~~ **Hecho.**
+- ~~No borrar las entradas manuales hasta confirmar que la versión conectada se ve igual de bien o mejor.~~ **Confirmado — el respaldo (`PROJECTS_FALLBACK`) se mantiene solo como fallback de emergencia, no se borró.**
+
+## Campos agregados desde este documento original
+
+- `Estado` (Finalizado / En curso, etc.)
+- `Comentario` (texto) + `Comentario publicado` (checkbox) — nota adicional por proyecto, independiente del "Publicado" general
+- `Tiene imágenes` (checkbox informativo)
+- Las fotos usan sufijo de nombre de archivo `-NP`/`-ES` (nube de puntos/escaneo) o `-AB` (as-built) para filtrarse por servicio específico dentro del portafolio.
