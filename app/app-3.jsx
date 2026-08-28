@@ -385,7 +385,9 @@ function Services({ t, lang, onNav }) {
         <div className="services-grid">
           {SERVICES.map((s, i) => {
             const clickable = !!s.tag;
-            const count = clickable ? PROJECTS.filter(p => p.services && p.services.includes(s.tag)).length : 0;
+            const count = clickable
+              ? PROJECTS.filter(p => p.services && p.services.some(sv => normalizeServiceKey(sv) === normalizeServiceKey(s.tag))).length
+              : 0;
             return (
               <div
                 key={s.num}
