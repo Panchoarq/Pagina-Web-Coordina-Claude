@@ -84,8 +84,7 @@ function HeroB({ t, lang, onNav }) {
       <HeroSignals />
       <div className="heroB-bg-fade" />
       <div className="inner">
-        <div className="hero-status">
-          <span><span className="live-dot" />Coordinando {PROJECTS.filter(p => p.status.includes("curso")).length} proyectos en vivo</span>
+        <div className="hero-status" style={{ justifyContent: "flex-end" }}>
           <span>Modelo MEP · Hospital</span>
         </div>
         <div className="heroB-grid">
@@ -583,9 +582,9 @@ function Contact({ t }) {
             <h2 className="contact-title">{t.contactTitle}<span style={{ color: "var(--accent)" }}>.</span></h2>
             <p className="contact-body" style={{ marginTop: 24 }}>{t.contactBody}</p>
             <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 12, fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase" }}>
-              <div style={{ display: "flex", gap: 16 }}><span style={{ color: "var(--ink-mute)", minWidth: 80 }}>Email</span><span>hola@bimconsulting.cl</span></div>
-              <div style={{ display: "flex", gap: 16 }}><span style={{ color: "var(--ink-mute)", minWidth: 80 }}>Tel</span><span>+56 2 2977 0000</span></div>
-              <div style={{ display: "flex", gap: 16 }}><span style={{ color: "var(--ink-mute)", minWidth: 80 }}>Oficina</span><span>Av. Apoquindo 4700, Las Condes</span></div>
+              <div style={{ display: "flex", gap: 16 }}><span style={{ color: "var(--ink-mute)", minWidth: 80 }}>Email</span><span>coordina@bimconsulting.cl</span></div>
+              <div style={{ display: "flex", gap: 16 }}><span style={{ color: "var(--ink-mute)", minWidth: 80 }}>Tel</span><span>+56 9 7430 0232</span></div>
+              <div style={{ display: "flex", gap: 16 }}><span style={{ color: "var(--ink-mute)", minWidth: 80 }}>Oficina</span><span>Don Carlos 2986, of 8, Las Condes</span></div>
             </div>
           </div>
           <form className="contact-form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
