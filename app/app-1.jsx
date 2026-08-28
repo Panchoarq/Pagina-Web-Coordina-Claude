@@ -107,7 +107,7 @@ const I18N = {
 };
 
 const SERVICES = [
-  { num: "01", es: "Asesoria BIM", en: "BIM Advisory", tag: "BIM Management", desc_es: "BEP, roles y flujos de informacion desde el kickoff.", desc_en: "BEP, roles and information flows from kickoff.",
+  { num: "01", es: "Asesoria BIM", en: "BIM Advisory", tag: null, desc_es: "BEP, roles y flujos de informacion desde el kickoff.", desc_en: "BEP, roles and information flows from kickoff.",
     long_es: "Acompanamiento a empresas en sus procesos BIM, desde definicion de objetivos y estandares hasta el rol de Gestion BIM y BIM Manager dentro de la organizacion. Incluye revision de modelos y entregables, validando cumplimiento de estandares y calidad antes de avanzar en el proyecto. Orientado a equipos que ya ejecutan BIM y buscan un asesor senior externo que oriente decisiones y controle resultados." },
   { num: "02", es: "Modelado BIM - Arquitectura / MEP / Civil", en: "BIM Modeling - Architecture / MEP / Civil", tag: "Modelado MEP", desc_es: "Modelos LOD 200-400 multidisciplina, federados y auditados.", desc_en: "Multi-discipline LOD 200-400 models, federated and audited.",
     long_es: "Desarrollo de modelos en LOD 200 a 400, multidisciplina, federados y auditados. Este modelado se realiza tanto como parte de un encargo de coordinacion, donde asumimos el modelado de todas las especialidades de un proyecto (o las que se requieran), como en encargos puntuales de modelado de una sola especialidad." },
@@ -121,7 +121,7 @@ const SERVICES = [
     long_es: "Contamos con escaner laser movil y estatico, de largo alcance y alta precision, y experiencia en levantamientos de infraestructura como aeropuertos, instalaciones hospitalarias y edificios de distinta categoria. Cada levantamiento se planifica pensando en el modelado posterior a partir de la nube de puntos, por lo que nuestra experiencia en BIM aporta una mirada critica sobre como ejecutarlo." },
   { num: "07", es: "Modelos As-Built", en: "As-Built Models", tag: "Modelado As-Built", desc_es: "Modelos post-construccion verificables contra realidad.", desc_en: "Post-construction models verifiable against reality.",
     long_es: "Consecuencia directa del escaneo laser: estos levantamientos se realizan pensando en la generacion de informacion As-Built, tanto modelos como planos. Contamos con casos emblematicos que respaldan esta experiencia, como el Aeropuerto Internacional de Santiago, donde se genero el modelo As-Built del terminal y de todas sus instalaciones —central termica, planta de tratamiento de agua— a partir de un levantamiento con escaner laser; y el Teatro GAM Etapa 2, cuya obra inconclusa fue levantada integramente con tecnologia laser, generando un modelo As-Built real desde el cual se desarrollo el proyecto ejecutivo." },
-  { num: "08", es: "Soporte en terreno", en: "On-site Support", tag: "Asesoria en Obra", desc_es: "Acompanamiento continuo en obra, resolucion en tiempo real.", desc_en: "Continuous on-site support, real-time resolution.",
+  { num: "08", es: "Soporte en terreno", en: "On-site Support", tag: null, desc_es: "Acompanamiento continuo en obra, resolucion en tiempo real.", desc_en: "Continuous on-site support, real-time resolution.",
     long_es: "Asesoria remota o con personal instalado en obra, para el seguimiento de los modelos de coordinacion y la resolucion de problemas de coordinacion que surgen dia a dia. El trabajo se resume en fichas y planos especificos de coordinacion." },
 ];
 
