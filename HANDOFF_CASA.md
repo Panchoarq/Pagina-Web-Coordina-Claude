@@ -4,6 +4,31 @@ Todo el código está en GitHub — nada vive solo en este PC. Con esta guía de
 
 ---
 
+## 0. Estado de despliegue (leer primero)
+
+**Producción está al día — no hay ningún fix pendiente de desplegar.**
+
+Verificado en vivo contra `coordinabimconsulting.com` el 2026-08-28: el
+fix de logo (transparente, mismo tamaño en todas las vistas), header
+oscuro `#101010`, menú que respondía mal desde Portafolio, y el botón
+Atrás del navegador — **todo eso ya está en producción**, desplegado
+desde `main` en el commit `8972da7` (y `vercel --prod` ya corrido sobre
+ese commit).
+
+Si otra sesión de Claude pregunta "¿despliego el fix pendiente de
+logo/menú/back?" — la respuesta es **no, ya está desplegado**, no hace
+falta correr `vercel --prod` de nuevo por eso. Antes de asumir que algo
+quedó pendiente, comparar el commit de `main` (`git log origin/main
+--oneline -1`) contra lo que responde `curl coordinabimconsulting.com`
+en vivo, en vez de asumir por el historial de conversación.
+
+El único trabajo realmente pendiente ahora mismo es la exploración de
+diseño en el branch `galeria-nueva` (ver sección 9) — esa sí NO está
+en producción todavía, a propósito, porque es solo una maqueta en
+revisión.
+
+---
+
 ## 1. Repositorio (código)
 
 **URL:** https://github.com/Panchoarq/Pagina-Web-Coordina-Claude
