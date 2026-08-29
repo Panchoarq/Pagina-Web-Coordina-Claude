@@ -1,9 +1,19 @@
 {
-  "name": "coordina-bim-portafolio",
-  "version": "1.0.0",
+  "name": "coordina-bim-consulting",
   "private": true,
-  "description": "Sitio de coordina BIM Consulting. Frontend estático (React vía Babel en el navegador) + función serverless que conecta el portafolio a Airtable.",
-  "engines": {
-    "node": ">=18"
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "geist": "^1.3.1",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "three": "^0.169.0"
   }
 }
