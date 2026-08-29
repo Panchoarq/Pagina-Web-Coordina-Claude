@@ -105,3 +105,34 @@ Abre `http://localhost:5178/template.html` (no `/`, porque `index.html` ya no ex
 - **Vercel:** cuenta con acceso a `panchoarqs-projects`
 - **Airtable:** el Personal Access Token (el mismo que ya usaste, o generar uno nuevo desde Airtable → Developer Hub → Personal access tokens)
 - **Cloudflare:** solo si necesitas tocar el DNS del dominio (normalmente no hace falta)
+
+---
+
+## 9. Branch en curso: rediseño de la galería
+
+Hay un branch **`galeria-nueva`** (ya en GitHub) con una exploración de diseño
+para el portafolio y el hero — dirección "lámina técnica" (grilla de
+coordenadas, capas por disciplina en vez de pastillas genéricas, hero con
+marco tipo plano). Ver `design-exploration/README.md` dentro de ese branch
+para el detalle completo y el estado (maqueta aprobada, falta construir en
+código real).
+
+Para retomarlo en la máquina de casa:
+```bash
+git fetch origin
+git checkout galeria-nueva
+```
+
+**No afecta el SEO** — `api/render.js` es independiente de los componentes
+visuales, así que este rediseño no toca la indexación en Google.
+
+**Skills de diseño usados** (para tenerlos también en casa):
+- `frontend-design` — parece venir incluido en Claude Code por defecto (no
+  se encontró como plugin instalable aparte). Revisa si aparece solo en la
+  lista de skills al escribir `/` en una sesión nueva; si no, prueba
+  actualizar el CLI de Claude Code.
+- `design:design-critique` (plugin "design", también trae `design-system`,
+  `accessibility-review`, `design-handoff`, etc.) — no se pudo confirmar un
+  comando de instalación exacto desde esta sesión. En una sesión interactiva
+  en la máquina de casa, corre `/plugin`, busca "design" en el marketplace,
+  e instálalo si aparece ahí.
