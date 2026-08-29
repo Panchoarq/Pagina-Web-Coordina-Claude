@@ -379,6 +379,72 @@ section { padding: 120px 0; }
   .gallery-slider-item { flex-basis: 88%; }
 }
 
+/* ---------- Team grid ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+.team-grid img {
+  width: 100%; aspect-ratio: 1/1; object-fit: cover;
+  filter: grayscale(1);
+  display: block;
+}
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 560px) {
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Awards / trayectoria ---------- */
+.awards-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  gap: 0;
+}
+.awards-list li {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  align-items: baseline;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+.awards-list li:last-child { border-bottom: 1px solid var(--line); }
+.awards-list span { color: var(--mute); }
+.awards-list h3 { font-size: 22px; letter-spacing: -0.01em; grid-column: 2; }
+.awards-list p { grid-column: 2; color: var(--mute); margin-top: 6px; }
+
+@media (max-width: 720px) {
+  .awards-list li { grid-template-columns: 1fr; gap: 8px; }
+  .awards-list h3, .awards-list p { grid-column: 1; }
+}
+
+/* ---------- Clients wordmark wall ---------- */
+.clients-grid {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.clients-grid li {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 32px 20px;
+  color: var(--mute);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  min-height: 96px;
+}
+@media (max-width: 720px) {
+  .clients-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--line);

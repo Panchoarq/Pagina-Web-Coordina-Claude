@@ -1,10 +1,15 @@
-import { sampleProject } from "@/lib/sample-project";
+import { notFound } from "next/navigation";
+import { getProjectBySlug, projects } from "@/lib/projects";
 import DesignPlansViewer from "@/components/DesignPlansViewer";
 import ProjectGallery from "@/components/ProjectGallery";
 
+export function generateStaticParams() {
+  return projects.map((p) => ({ slug: p.slug }));
+}
+
 export default function ProjectPage({ params }) {
-  // Muestra unica por ahora; cuando se conecte Airtable esto busca por slug.
-  const project = sampleProject;
+  const project = getProjectBySlug(params.slug);
+  if (!project) notFound();
 
   return (
     <>
@@ -14,13 +19,13 @@ export default function ProjectPage({ params }) {
         <div className="proj-hero-content">
           <div>
             <p className="mono" style={{ color: "rgba(255,255,255,0.6)", marginBottom: 12 }}>
-              {project.code}
+              {project.code} — {project.typology}
             </p>
             <h1 className="proj-hero-title">{project.name}</h1>
           </div>
           <p className="proj-hero-area">
             {project.area}
-            <span>{project.areaUnit}</span>
+            <span>m²</span>
           </p>
         </div>
       </section>

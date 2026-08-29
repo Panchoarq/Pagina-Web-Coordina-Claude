@@ -1,13 +1,18 @@
 import Link from "next/link";
-import { sampleProject } from "@/lib/sample-project";
+import { projects } from "@/lib/projects";
+import TeamSection from "@/components/TeamSection";
+import AwardsSection from "@/components/AwardsSection";
+import ClientsSection from "@/components/ClientsSection";
 
 export default function HomePage() {
+  const hero = projects[0];
+
   return (
     <>
       <section className="hero" style={{ padding: 0 }}>
         <div className="hero-media">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={sampleProject.heroImage} alt="" />
+          <img src={hero.image} alt="" />
         </div>
         <div className="hero-content">
           <p className="hero-eyebrow mono">Estudio de coordinacion BIM</p>
@@ -52,18 +57,24 @@ export default function HomePage() {
           <h2>Proyectos seleccionados.</h2>
         </div>
         <div className="work-grid">
-          <Link href={`/work/${sampleProject.slug}`} className="work-card">
-            <div className="work-card-img">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={sampleProject.heroImage} alt={sampleProject.name} />
-            </div>
-            <div className="work-card-overlay">
-              <h3>{sampleProject.name}</h3>
-              <p>{sampleProject.code} — {sampleProject.area} {sampleProject.areaUnit}</p>
-            </div>
-          </Link>
+          {projects.map((p) => (
+            <Link key={p.slug} href={`/work/${p.slug}`} className="work-card">
+              <div className="work-card-img">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.image} alt={p.name} />
+              </div>
+              <div className="work-card-overlay">
+                <h3>{p.name}</h3>
+                <p>{p.code} — {p.typology} — {p.area} m²</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
+
+      <AwardsSection />
+      <TeamSection />
+      <ClientsSection />
     </>
   );
 }
