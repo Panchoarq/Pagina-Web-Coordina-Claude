@@ -1,10 +1,13 @@
 import Link from "next/link";
-import { projects } from "@/lib/projects";
+import { getProjects } from "@/lib/projects";
 import TeamSection from "@/components/TeamSection";
 import AwardsSection from "@/components/AwardsSection";
 import ClientsSection from "@/components/ClientsSection";
 
-export default function HomePage() {
+export const revalidate = 60;
+
+export default async function HomePage() {
+  const projects = await getProjects();
   const hero = projects[0];
 
   return (
@@ -37,7 +40,7 @@ export default function HomePage() {
             <p>Años de experiencia</p>
           </div>
           <div className="stat-cell">
-            <h3>75+</h3>
+            <h3>{projects.length}+</h3>
             <p>Proyectos coordinados</p>
           </div>
           <div className="stat-cell">

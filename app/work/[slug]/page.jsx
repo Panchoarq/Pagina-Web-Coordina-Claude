@@ -1,14 +1,13 @@
 import { notFound } from "next/navigation";
-import { getProjectBySlug, projects } from "@/lib/projects";
+import { getProjectBySlug } from "@/lib/projects";
 import DesignPlansViewer from "@/components/DesignPlansViewer";
 import ProjectGallery from "@/components/ProjectGallery";
 
-export function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
-}
+export const revalidate = 60;
 
-export default function ProjectPage({ params }) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectPage({ params }) {
+  const { slug } = await params;
+  const project = await getProjectBySlug(slug);
   if (!project) notFound();
 
   return (
