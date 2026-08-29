@@ -308,6 +308,77 @@ section { padding: 120px 0; }
   .plans-thumb { min-width: 90px; }
 }
 
+/* ---------- Project gallery (Detail / Masonry / Slider) ---------- */
+.gallery-toggle {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+.gallery-toggle button {
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 8px 16px;
+  cursor: pointer;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  color: var(--mute);
+}
+.gallery-toggle button.is-active {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.gallery-detail {
+  display: grid;
+  gap: 24px;
+}
+.gallery-detail img {
+  width: 100%;
+  display: block;
+  filter: grayscale(1);
+}
+
+.gallery-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+.gallery-masonry-item { overflow: hidden; }
+.gallery-masonry-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(1);
+}
+.gallery-masonry-item.span-1 { grid-row: span 1; aspect-ratio: 1/1; }
+.gallery-masonry-item.span-2 { grid-column: span 2; aspect-ratio: 2/1; }
+.gallery-masonry-item.span-3 { grid-row: span 2; aspect-ratio: 3/4; }
+
+@media (max-width: 720px) {
+  .gallery-masonry { grid-template-columns: repeat(2, 1fr); }
+  .gallery-masonry-item.span-2 { grid-column: span 2; }
+}
+
+.gallery-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+}
+.gallery-slider-item {
+  flex: 0 0 70%;
+  scroll-snap-align: start;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.gallery-slider-item img {
+  width: 100%; height: 100%; object-fit: cover; filter: grayscale(1);
+}
+@media (max-width: 720px) {
+  .gallery-slider-item { flex-basis: 88%; }
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--line);

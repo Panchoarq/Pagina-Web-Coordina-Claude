@@ -1,5 +1,6 @@
 import { sampleProject } from "@/lib/sample-project";
 import DesignPlansViewer from "@/components/DesignPlansViewer";
+import ProjectGallery from "@/components/ProjectGallery";
 
 export default function ProjectPage({ params }) {
   // Muestra unica por ahora; cuando se conecte Airtable esto busca por slug.
@@ -53,6 +54,13 @@ export default function ProjectPage({ params }) {
             <p className="mono">Design plans</p>
           </div>
           <DesignPlansViewer plans={project.plans} />
+        </section>
+
+        <section>
+          <div className="section-head" style={{ marginBottom: 24 }}>
+            <p className="mono">Gallery</p>
+          </div>
+          <ProjectGallery images={project.gallery} />
         </section>
       </div>
     </>
