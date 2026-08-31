@@ -1,0 +1,138 @@
+.page {
+  padding-block: var(--space-2xl) var(--space-3xl);
+}
+
+.back {
+  font: var(--t-mono-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+.back:hover {
+  color: var(--ink);
+}
+
+.head {
+  margin-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--ink);
+  max-width: 62ch;
+}
+
+.code {
+  font: var(--t-mono-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+.title {
+  font: var(--t-h1);
+  margin-top: var(--space-sm);
+}
+
+.desc {
+  font: var(--t-body-lg);
+  color: var(--ink-700);
+  margin-top: var(--space-lg);
+}
+
+.esTag {
+  font: var(--t-mono-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-300);
+  margin-top: var(--space-md);
+}
+
+.layout {
+  margin-top: var(--space-2xl);
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.spec {
+  border-top: 1px solid var(--ink);
+  position: sticky;
+  top: calc(var(--header-h) + var(--space-lg));
+}
+
+.specRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.specRow dt {
+  font: var(--t-mono-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+.specRow dd {
+  font: var(--t-mono-data);
+  color: var(--ink);
+  margin: 0;
+}
+
+.noImages {
+  font: var(--t-body);
+  color: var(--ink-500);
+  border: 1px solid var(--hairline);
+  padding: var(--space-xl);
+}
+
+.more {
+  margin-top: var(--space-3xl);
+}
+
+.moreList {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-lg);
+}
+
+.moreList li {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.moreList a {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: baseline;
+  padding: var(--space-md) 0;
+  transition: opacity 150ms ease;
+}
+
+.moreList a:hover {
+  opacity: 0.6;
+}
+
+.moreCode {
+  font: var(--t-mono-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  min-width: 5rem;
+}
+
+.moreName {
+  font: 500 1.125rem / 1.3 var(--font-grotesk);
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  .spec {
+    position: static;
+  }
+}

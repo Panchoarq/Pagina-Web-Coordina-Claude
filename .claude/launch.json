@@ -2,6 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "coordina-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "-p", "3210"],
+      "port": 3210
+    },
+    {
       "name": "referencia-estatica",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["--yes", "serve", "-l", "5178", "."],
