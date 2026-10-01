@@ -148,19 +148,18 @@ function ServiceIcon({ name, lang }) {
   const [show, setShow] = useState(false);
   const def = findServiceDef(name);
   const label = def ? (lang === "es" ? def.es : def.en) : name;
-  const glyphKind = def ? def.glyph : "circle";
   return (
     <span
-      style={{ position: "relative", display: "inline-flex", alignItems: "center", color: "var(--fg-soft)", cursor: "default" }}
+      style={{ position: "relative", display: "inline-flex", alignItems: "center", cursor: "default" }}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
-      <Glyph kind={glyphKind} size={16} stroke={1.5} />
+      <span style={{ width: 9, height: 9, display: "inline-block", background: serviceColor(name) }} />
       {show && (
         <span style={{
           position: "absolute", bottom: "calc(100% + 6px)", left: "50%", transform: "translateX(-50%)",
-          background: "var(--fg)", color: "var(--bg)", fontSize: 11, fontFamily: "var(--f-sans)",
-          whiteSpace: "nowrap", padding: "4px 8px", borderRadius: 4, pointerEvents: "none",
+          background: "var(--ink)", color: "var(--bg)", fontSize: 11, fontFamily: "var(--font-sans)",
+          whiteSpace: "nowrap", padding: "4px 8px", pointerEvents: "none",
           zIndex: 100, letterSpacing: "0.03em",
         }}>
           {label}
@@ -177,22 +176,23 @@ function ProjectCard({ project, lang, onOpen, index }) {
   const services = project.services || [];
   return (
     <article
-      className={`pcard pcard-${project.span}`}
+      className="port-cell"
       onClick={() => onOpen(project)}
       style={{ "--stagger": `${(index % 8) * 40}ms` }}
     >
-      <div className="pcard-media">
+      <div className="port-thumb">
         <ProjectPlaceholder label={project.name} code={project.code} variant={index} real={imgUrl} />
+        <span className="port-thumb-num">{project.code}</span>
         {project.images && project.images.length > 1 && (
           <span className="pcard-imgcount">{project.images.length}</span>
         )}
       </div>
-      <div className="pcard-meta">
-        <span className="pcard-ty">{ty ? ty[lang] : ""}</span>
-        <h3 className="pcard-name">{project.name}</h3>
-        <span className="pcard-year">{project.year} · {project.location}</span>
-        {services.length > 1 && (
-          <div style={{ display: "flex", gap: 8, marginTop: 6 }} onClick={e => e.stopPropagation()}>
+      <div className="port-tblock">
+        <span className="port-tblock-ty">{ty ? ty[lang] : ""}</span>
+        <h3 className="port-tblock-name">{project.name}</h3>
+        <span className="port-tblock-meta">{project.year} · {project.location}</span>
+        {services.length > 0 && (
+          <div className="port-tblock-discs" onClick={e => e.stopPropagation()}>
             {services.map(s => <ServiceIcon key={s} name={s} lang={lang} />)}
           </div>
         )}

@@ -51,13 +51,37 @@ function PortfolioPage({ t, lang, initialFilter = "all", onOpen, onBack, sortBy 
         <div className="inner">
           <FilterBar filter={filter} onChange={setFilter} lang={lang} t={t} />
           <PortfolioMetrics filtered={filtered} lang={lang} filter={filter} />
-          <div className="mosaic">
-            {filtered.map((p, i) => (
-              <ProjectCard key={p.code} project={p} lang={lang} onOpen={onOpen} index={i} />
-            ))}
-          </div>
+          <PortfolioGrid filtered={filtered} lang={lang} onOpen={onOpen} />
         </div>
       </div>
+    </div>
+  );
+}
+
+// Portafolio como grilla de coordenadas: columnas A-D, filas numeradas,
+// casillas vacias tramadas cuando sobran (mismo lenguaje de una lamina
+// de planos real).
+function PortfolioGrid({ filtered, lang, onOpen }) {
+  const cols = 4;
+  const colLetters = ["A", "B", "C", "D"];
+  const rows = Math.max(1, Math.ceil(filtered.length / cols));
+  const cells = [];
+  for (let r = 0; r < rows; r++) {
+    cells.push(<div key={`r${r}`} className="port-row-label">{r + 1}</div>);
+    for (let c = 0; c < cols; c++) {
+      const i = r * cols + c;
+      const p = filtered[i];
+      if (p) {
+        cells.push(<ProjectCard key={p.code} project={p} lang={lang} onOpen={onOpen} index={i} />);
+      } else {
+        cells.push(<div key={`e${r}-${c}`} className="port-cell" style={{ background: "repeating-linear-gradient(135deg, transparent, transparent 7px, var(--rule-soft) 7px, var(--rule-soft) 8px)", cursor: "default" }} />);
+      }
+    }
+  }
+  return (
+    <div className="port-grid-frame">
+      <div className="port-col-labels"><span></span>{colLetters.map((l) => <span key={l}>{l}</span>)}</div>
+      <div className="port-grid-body">{cells}</div>
     </div>
   );
 }

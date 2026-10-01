@@ -977,6 +977,20 @@ const SERVICE_IMAGE_TAG = {
   [normalizeServiceKey("Modelado As-Built")]: "AB",
 };
 
+// Color por disciplina/servicio para el portafolio "lamina tecnica"
+// (chips de capa, swatch en cada tarjeta de proyecto).
+const SERVICE_COLOR_MAP = {
+  [normalizeServiceKey("BIM Management")]: "var(--disc-neutral)",
+  [normalizeServiceKey("Asesoria en Obra")]: "var(--disc-neutral)",
+  [normalizeServiceKey("Modelado MEP")]: "var(--disc-mep)",
+  [normalizeServiceKey("Coordinacion BIM")]: "var(--disc-coord)",
+  [normalizeServiceKey("Escaneo laser 3D")]: "var(--disc-scan)",
+  [normalizeServiceKey("Modelado As-Built")]: "var(--disc-asbuilt)",
+};
+function serviceColor(name) {
+  return SERVICE_COLOR_MAP[normalizeServiceKey(name)] || "var(--disc-neutral)";
+}
+
 // Dado un proyecto y el filtro activo, devuelve el subconjunto de imágenes
 // que corresponde mostrar. Filtro por categoría (o "todos") = todas las
 // fotos. Filtro por un servicio con tag propio (NP/AB) = solo esas fotos.
@@ -1004,4 +1018,4 @@ function sortProjects(list, sortBy) {
   return arr;
 }
 
-Object.assign(window, { I18N, SERVICES, TYPOLOGIES, PROJECTS, SAMPLE_IMAGES, M2_BY_TYPE, PORTFOLIO_SUMMARY, filterProjects, sortProjects, imagesForServiceFilter, normalizeServiceKey });
+Object.assign(window, { I18N, SERVICES, TYPOLOGIES, PROJECTS, SAMPLE_IMAGES, M2_BY_TYPE, PORTFOLIO_SUMMARY, filterProjects, sortProjects, imagesForServiceFilter, normalizeServiceKey, serviceColor });

@@ -83,30 +83,36 @@ function HeroB({ t, lang, onNav }) {
       <div className="heroB-bg" style={{ backgroundImage: `url(${bgUrl})` }} />
       <HeroSignals />
       <div className="heroB-bg-fade" />
-      <div className="inner">
-        <div className="hero-status" style={{ justifyContent: "flex-end" }}>
-          <span>Modelo MEP · Hospital</span>
+      <div className="port-hero-frame" aria-hidden="true" />
+      <div className="port-hero-ticks-x" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+      <div className="port-hero-ticks-y" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span></div>
+      <div className="port-clash-mark">
+        <span className="port-clash-dot" />
+        <span className="port-clash-label">Clash detection — grid C3</span>
+      </div>
+      <div className="inner port-hero-inner">
+        <div>
+          <span className="kicker port-hero-kick">
+            <span className="port-hero-lam">Lám. 01</span>{t.heroKicker}
+          </span>
+          <h1 className="heroB-title" style={{ marginTop: 28 }}>
+            {t.heroTitle2.split(".").filter(Boolean).map((ln, i) => (
+              <div key={i} style={{ marginBottom: 4 }}>
+                {i === 1 ? <span className="stroke">{ln.trim()}.</span> : <span>{ln.trim()}.</span>}
+              </div>
+            ))}
+          </h1>
+          <p className="hero-body heroB-body" style={{ marginTop: 28 }}>{t.heroBody}</p>
+          <div className="heroA-ctas" style={{ marginTop: 28 }}>
+            <a className="btn btn-primary" href="#work" onClick={(e) => { e.preventDefault(); onNav && onNav("portfolio"); }}>{t.ctaWork} →</a>
+            <a className="btn btn-ghost" href="#services" onClick={(e) => { e.preventDefault(); onNav && onNav("services"); }}>{t.nav.services}</a>
+          </div>
         </div>
-        <div className="heroB-grid">
-          <div>
-            <span className="kicker" style={{ color: "rgba(255,255,255,0.75)" }}>{t.heroKicker}</span>
-            <h1 className="heroB-title" style={{ marginTop: 28 }}>
-              {t.heroTitle2.split(".").filter(Boolean).map((ln, i) => (
-                <div key={i} style={{ marginBottom: 4 }}>
-                  {i === 1 ? <span className="stroke">{ln.trim()}.</span> : <span>{ln.trim()}.</span>}
-                </div>
-              ))}
-            </h1>
-            <p className="hero-body heroB-body" style={{ marginTop: 28 }}>{t.heroBody}</p>
-            <div className="heroA-ctas" style={{ marginTop: 28 }}>
-              <a className="btn btn-primary" href="#work" onClick={(e) => { e.preventDefault(); onNav && onNav("portfolio"); }}>{t.ctaWork} →</a>
-              <a className="btn btn-ghost" href="#services" onClick={(e) => { e.preventDefault(); onNav && onNav("services"); }}>{t.nav.services}</a>
-            </div>
-          </div>
-          <div className="heroB-clash">
-            <span className="heroB-clash-dot" />
-            <span className="heroB-clash-label">Clash detection — coordinación en vivo</span>
-          </div>
+        <div className="port-tblock-strip">
+          <div><span className="port-tblock-k">Proyecto</span>Modelo MEP · Hospital</div>
+          <div><span className="port-tblock-k">Escala</span>S/E</div>
+          <div><span className="port-tblock-k">Disciplinas</span>Arq · Est · MEP</div>
+          <div><span className="port-tblock-k">Estado</span>Coordinación en curso</div>
         </div>
       </div>
     </section>
@@ -434,22 +440,14 @@ function Services({ t, lang, onNav }) {
   );
 }
 
-// --- Filter bar for portfolio ---
-function servicePillStyle(active) {
-  return {
-    padding: "8px 16px",
-    borderRadius: 24,
-    border: `1px solid ${active ? "var(--accent)" : "var(--rule-soft)"}`,
-    background: active ? "var(--accent)" : "transparent",
-    color: active ? "var(--accent-ink)" : "var(--ink)",
-    cursor: "pointer",
-    font: "inherit",
-    fontFamily: "var(--font-mono)",
-    fontSize: 11,
-    textTransform: "uppercase",
-    letterSpacing: "0.08em",
-    transition: "all 0.2s",
-  };
+// --- Filter bar for portfolio: panel de capas (CAD layers) ---
+function LayerChip({ active, color, onClick, children }) {
+  return (
+    <button onClick={onClick} className={`port-layer ${active ? "is-active" : ""}`}>
+      <span className="port-layer-sw" style={{ background: color }} />
+      {children}
+    </button>
+  );
 }
 
 function FilterBar({ filter, onChange, lang, t }) {
@@ -465,72 +463,42 @@ function FilterBar({ filter, onChange, lang, t }) {
     return Array.from(seen.values()).sort();
   })();
   return (
-    <div className="filter-bar" style={{ flexDirection: "column", alignItems: "stretch", gap: 12 }}>
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-mute)" }}>
-          {lang === "es" ? "Tipología" : "Typology"}
-        </span>
-        <button
+    <div className="port-layers">
+      <div className="port-layers-row">
+        <span className="port-layers-label">{lang === "es" ? "Tipología" : "Typology"}</span>
+        <LayerChip
+          active={filter.kind === "typology" && filter.value === "all"}
+          color="var(--ink)"
           onClick={() => onChange({ kind: "typology", value: "all" })}
-          className={`filter-pill ${filter.kind === "typology" && filter.value === "all" ? "is-active" : ""}`}
-          style={{
-            padding: "8px 16px",
-            borderRadius: 24,
-            border: `1px solid ${filter.kind === "typology" && filter.value === "all" ? "var(--accent)" : "var(--rule-soft)"}`,
-            background: filter.kind === "typology" && filter.value === "all" ? "var(--accent)" : "transparent",
-            color: filter.kind === "typology" && filter.value === "all" ? "var(--accent-ink)" : "var(--ink)",
-            cursor: "pointer",
-            font: "inherit",
-            fontFamily: "var(--font-mono)",
-            fontSize: 11,
-            textTransform: "uppercase",
-            letterSpacing: "0.08em",
-            transition: "all 0.2s",
-          }}
         >
-          {t.filterAll}
-        </button>
-        {TYPOLOGIES.map((ty) => (
-          <button
-            key={ty.id}
-            onClick={() => onChange({ kind: "typology", value: ty.id })}
-            className={`filter-pill ${filter.kind === "typology" && filter.value === ty.id ? "is-active" : ""}`}
-            style={{
-              padding: "8px 16px",
-              borderRadius: 24,
-              border: `1px solid ${filter.kind === "typology" && filter.value === ty.id ? "var(--accent)" : "var(--rule-soft)"}`,
-              background: filter.kind === "typology" && filter.value === ty.id ? "var(--accent)" : "transparent",
-              color: filter.kind === "typology" && filter.value === ty.id ? "var(--accent-ink)" : "var(--ink)",
-              cursor: "pointer",
-              font: "inherit",
-              fontFamily: "var(--font-mono)",
-              fontSize: 11,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
-              transition: "all 0.2s",
-            }}
-          >
-            {lang === "es" ? ty.es : ty.en}
-          </button>
-        ))}
+          {t.filterAll} <span className="port-layer-n">{PROJECTS.length}</span>
+        </LayerChip>
+        {TYPOLOGIES.map((ty) => {
+          const active = filter.kind === "typology" && filter.value === ty.id;
+          const count = PROJECTS.filter((p) => p.typology === ty.id).length;
+          return (
+            <LayerChip key={ty.id} active={active} color="var(--ink-mute)" onClick={() => onChange({ kind: "typology", value: ty.id })}>
+              {lang === "es" ? ty.es : ty.en} <span className="port-layer-n">{count}</span>
+            </LayerChip>
+          );
+        })}
       </div>
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink-mute)" }}>
-          {lang === "es" ? "Servicio" : "Service"}
-        </span>
+      <div className="port-layers-row">
+        <span className="port-layers-label">{lang === "es" ? "Servicio" : "Service"}</span>
         {serviceTags.map((tag) => {
           const def = findServiceDef(tag);
           const label = def ? (lang === "es" ? def.es : def.en) : tag;
           const active = filter.kind === "service" && normalizeServiceKey(filter.value) === normalizeServiceKey(tag);
+          const count = PROJECTS.filter((p) => p.services && p.services.some((s) => normalizeServiceKey(s) === normalizeServiceKey(tag))).length;
           return (
-            <button
+            <LayerChip
               key={tag}
+              active={active}
+              color={serviceColor(tag)}
               onClick={() => onChange(active ? { kind: "typology", value: "all" } : { kind: "service", value: tag })}
-              className={`filter-pill ${active ? "is-active" : ""}`}
-              style={servicePillStyle(active)}
             >
-              {label}
-            </button>
+              {label} <span className="port-layer-n">{count}</span>
+            </LayerChip>
           );
         })}
       </div>
