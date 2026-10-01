@@ -45,6 +45,30 @@ function renderProjectItem(p) {
   </li>`;
 }
 
+// Estilos minimos para el HTML de respaldo (lo que ve un rastreador, o un
+// visitante si el JS tarda/no carga). Todo escopeado bajo #root con
+// selectores de etiqueta -- una vez React monta, reemplaza este bloque
+// entero y usa sus propias clases, asi que no hay choque de estilos.
+const SEO_STYLE = `
+#root { font-family: "Space Grotesk", system-ui, sans-serif; background: #f4f1ea; color: #0e0e0e; }
+#root header { display: flex; justify-content: space-between; align-items: center; padding: 20px clamp(20px,4vw,56px); border-bottom: 1px solid #0e0e0e; }
+#root header a { color: #0e0e0e; text-decoration: none; font-weight: 500; }
+#root header nav { display: flex; gap: 20px; font-family: "JetBrains Mono", monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+#root header nav a { color: #0e0e0e; }
+#root main { max-width: 860px; margin: 0 auto; padding: 48px clamp(20px,4vw,56px) 80px; }
+#root h1 { font-size: clamp(28px,5vw,44px); font-weight: 500; letter-spacing: -0.02em; margin: 0 0 20px; }
+#root main > p { color: #4a4a48; font-size: 16px; line-height: 1.6; margin: 0 0 40px; max-width: 65ch; }
+#root section { padding: 36px 0; border-top: 1px solid rgba(14,14,14,0.14); }
+#root h2 { font-size: clamp(20px,3vw,28px); font-weight: 500; margin: 0 0 12px; letter-spacing: -0.01em; }
+#root section > p { color: #4a4a48; font-size: 15px; line-height: 1.5; margin: 0 0 20px; max-width: 65ch; }
+#root ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 24px; }
+#root li { padding: 16px 0; border-bottom: 1px solid rgba(14,14,14,0.1); }
+#root h3 { font-size: 17px; font-weight: 500; margin: 0 0 8px; }
+#root li p { color: #4a4a48; font-size: 14px; line-height: 1.5; margin: 0 0 4px; max-width: 65ch; }
+#root .proj-meta, #root .proj-services { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.04em; color: #8a8680; text-transform: uppercase; }
+#root footer { text-align: center; padding: 24px; font-family: "JetBrains Mono", monospace; font-size: 11px; color: #8a8680; letter-spacing: 0.06em; }
+`;
+
 function buildSeoHtml(projects) {
   const projectItems = (projects || []).map(renderProjectItem).join("\n");
   const serviceItems = SERVICES.map(
@@ -52,6 +76,7 @@ function buildSeoHtml(projects) {
   ).join("\n");
 
   return `
+<style>${SEO_STYLE}</style>
 <header>
   <a href="/">coordina Bim Consulting</a>
   <nav>
